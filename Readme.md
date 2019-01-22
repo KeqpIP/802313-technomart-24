@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Андрей Бетин](https://up.htmlacademy.ru/htmlcss/24/user/802313).
-* Наставник: `Неизвестно`.
+* Наставник: [Владислав Кривокора](https://htmlacademy.ru/profile/krivokora).
 
 ---
 
