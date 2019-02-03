@@ -9,7 +9,7 @@
   <a class="main-header-logo" href="#">
     <img src="img/index-logo.svg" width="220" height="40" alt="Логотип «Техномарт»">
   </a>
-  <form><input class="search" type="text" placeholder="Поиск:"></form>
+  <form><input class="search" type="text" placeholder="Поиск:" aria-label="Поиск"></form>
   <a class="bookmarks" href="bookmarks.html">Закладки:</a>
   <a class="cart" href="cart.html">Корзина: </a>
   <a class="order" href="order.html">Оформить заказ</a>
@@ -59,12 +59,32 @@
     <p class="contacts">
     Вы можете забрать товар сами, заехав в наш офис:
      <p>
-       <a href="#">
-       <img src="img/map.png" width="300" height="158" alt="Наш офис на карте">
+       <a href="map.html">
+       <img src="img/map.png" width="300" height="158" alt="Офис компании по адресу ул. Б. Конюшенная, д. 19/8, г. Санкт-Петербург">
        </a>
      </p>
      <a class="button" href="contacts.html">Заблудились? Напишите нам!</a>
      </p>
+   </section>
+   <section class="feedback">
+    <button class="close" aria-label="Закрыть окно">Закрыть</button>
+    <form class="feedback-form" action="mail@htmlacademy.ru" method="POST">
+      <p>
+        <label class="visually-hidden" for="form-name">Ваше имя:</label>
+        <input class="feedback-name" type="text" id="form-name" placeholder="Имя Фамилия">
+      </p>
+      <p>
+        <label class="visually-hidden" for="form-email">Ваше e-mail:</label>
+        <input class="feedback-email" type="text" id="form-email" placeholder="email@example.com">
+      </p>
+      <p>
+        <label class="visually-hidden" for="form-message">Текст письма:</label>
+        <input class="feedback-message" type="text" id="form-message" placeholder="В свободной форме">
+      </p>
+      <button class="feedback-button" type="submit">
+        Отправить
+      </button>
+    </form>
    </section>
 </main>
 
@@ -96,9 +116,9 @@
     Все права защищены
   </p>
   <ul class="footer-social">
-    <li><a class="social-button" href="#">Вконтакте</a></li>
-    <li><a class="social-button" href="#">Фейсбук</a></li>
-    <li><a class="social-button" href="#">Инстаграм</a></li>
+    <li><a class="social-button" href="#" aria-label="Техномарт ВКонтакте" >Вконтакте</a></li>
+    <li><a class="social-button" href="#" aria-label="Техномарт в Фейсбук">Фейсбук</a></li>
+    <li><a class="social-button" href="#" aria-label="Техномарт в Инстаграм">Инстаграм</a></li>
   </ul>
   <p class="footer-feedback">
     <b>Обратная связь:</b>
