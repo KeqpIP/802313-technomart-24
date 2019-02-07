@@ -1,0 +1,555 @@
+body {
+  margin: 0;
+
+  font-family: "PT Sans", Verdana, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: none;
+
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.user-navigation,
+.site-navigation,
+.transport-companies,
+.store-navigation,
+.footer-social,
+.breadcrumb,
+.sorting,
+.filters-company,
+.filters-type-power,
+.stock {
+  list-style: none;
+}
+
+.main-header {
+background-color: #f4f7f9;
+}
+
+.top-header,
+.top-header a {
+  font-family: "Cuprum", Verdana, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: none;
+
+  background-color: #293449
+}
+
+.search {
+  border: 0px;
+  background-color: transparent;
+}
+
+.search:focus {
+  background-color: #ffffff;
+}
+
+/*Код для placeholder который заменяет цвет и убирает плавно текст при фокусе*/
+.search::-webkit-input-placeholder {color:#ffffff;}
+.search::-moz-placeholder          {color:#ffffff;}/* Firefox 19+ */
+.search:-moz-placeholder           {color:#ffffff;}/* Firefox 18- */
+.search:-ms-input-placeholder      {color:#ffffff;}
+
+.search::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+.search::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+.search:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+.search:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+.search:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+.search:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+.search:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+.search:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+/*Не смог разобраться с тем, как убрать обводку при фокусе, то что нашёл в интернете почему-то не работало*/
+
+.top-header a:active {
+  color: rgb(255, 255, 255, 0.6);
+}
+
+/* Почему-то, если я применяю это не для h1, а для класса promo, то не происходит никаких изменений */
+h1 {
+  font-family: "Cuprum", Verdana, sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 400;
+  color: #ee3643;
+  text-transform: none;
+}
+
+.contacts-mini address {
+  font-family: "Cuprum", Verdana, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #32425c;
+  text-transform: none;
+
+  background-color: #f4f7f9;
+}
+
+.contacts-mini a {
+  font-family: "Cuprum", Verdana, sans-serif;
+  font-style: normal;
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #ee3643;
+  text-transform: none;
+
+  background-color: #f4f7f9;
+}
+
+
+.login-link,
+.registration-link {
+  font-family: "Cuprum", Verdana, sans-serif;
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: none;
+  text-decoration: none;
+
+  background-color: #ffffff;
+}
+
+a.login-link:hover,
+a.registration-link:hover,
+a.my-orders:hover,
+a.profile:hover,
+a.login-link:focus,
+a.registration-link:focus,
+a.my-orders:focus,
+a.profile:focus {
+  color: #ee3643;
+}
+
+a.login-link:active,
+a.registration-link:active,
+a.user-link:active {
+  color: rgb(0, 0, 0, 0.3);
+}
+
+a.my-orders:active,
+a.profile:active {
+  color: rgb(50, 66, 92, 0.3);
+}
+
+.button-main {
+  font-family: "Cuprum", Verdana, sans-serif;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 17px;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: none;
+
+  background-color: #32425c;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus {
+  background-color: #293449;
+}
+
+.main-navigation a:active {
+  color: rgb(255, 255, 255, 0.5)
+}
+
+.container h2 {
+  font-family: "Cuprum", Verdana, sans-serif;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+}
+
+.transport-companies {
+  font-family: "Cuprum", Verdana, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: none;
+
+  background-color: #ffffff;
+}
+
+.button {
+  font-family: "Cuprum", Verdana, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background-color: #ee3643;
+}
+
+a.button:hover,
+a.button:focus,
+.feedback-button:hover,
+.feedback-button:focus,
+a.order:hover,
+a.order:focus {
+  background-color: #ca2c37;
+}
+
+a.button:active,
+.feedback-button:active,
+a.order:active {
+  background-color: #ba2732;
+}
+
+
+.top-footer {
+  font-family: "Cuprum", Verdana, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: none;
+
+  background-color: #32425c;
+}
+
+.top-footer address {
+  font-style: normal;
+}
+
+.top-footer a {
+  color: #ffffff;
+
+  background-color: #32425c;
+}
+
+.store-navigation .button-main{
+  color: #ffd180;
+
+  background-color: #32425c;
+}
+
+.footer-navigation a:hover,
+.footer-navigation a:focus {
+  text-decoration-line: underline;
+}
+
+.footer-navigation a:active {
+  text-decoration-line: none;
+  opacity: 0.5;
+}
+
+.bottom-footer {
+  font-family: "Cuprum", Verdana, sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: none;
+
+  background-color: #293449;
+}
+
+.bottom-footer a {
+  text-transform: none;
+  color: #ffd180;
+
+  background-color: #293449;
+}
+
+.bottom-footer a:hover,
+.bottom-footer a:focus {
+  text-decoration-line: underline;
+}
+
+.bottom-footer a:active {
+  text-decoration-line: none;
+  color: #ee3643;
+}
+
+.footer-social a:hover,
+.footer-social a:focus {
+  text-decoration-line: none;
+  color: #ee3643
+}
+
+/*Разметка каталога*/
+.my-orders,
+.profile {
+  font-family: "Cuprum", Verdana, sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #32425c;
+  text-transform: none;
+  text-decoration-line: underline;
+
+  background-color: #f2f6f8;
+}
+.user-navigation .user-link {
+  font-family: "Cuprum", Verdana, sans-serif;
+  font-style: normal;
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: none;
+
+  background-color: #ffffff;
+}
+
+
+.breadcrumb a {
+  font-family: "PT Sans", Verdana, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+}
+
+.store-selection h2 {
+  font-family: "Cuprum", Verdana, sans-serif;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #32425c;
+  text-transform: uppercase;
+
+  background-color: #f2f6f8;
+}
+
+.name-section,
+.sort-type {
+  font-family: "PT Sans", Verdana, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: none;
+
+  background-color: #ffffff;
+}
+
+
+
+.sort-type {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #ee3643;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sorting a:hover,
+.sorting a:focus {
+  text-decoration-style: solid;
+  color: rgba(0, 0, 0);
+}
+
+.sorting a:active {
+  text-decoration: none;
+  color: #ee3643;
+}
+
+.filters h3 {
+  font-family: "PT Sans", Verdana, sans-serif;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+}
+
+.filters label {
+  font:inherit;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.product h4 {
+  font:inherit;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #000000;
+}
+
+del {
+  font:inherit;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #999999;
+}
+
+ins {
+  font:inherit;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+
+  background-color: #ee3643;
+}
+
+.buy {
+  width: 135px;
+  height: 38px;
+
+  font-family: "Cuprum", Verdana, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background-color: #63a63e;
+}
+
+.buy:hover,
+.buy:focus {
+  background-color: #5fbb2d;
+}
+
+.buy:active {
+  background-color: #518534;
+}
+
+.add-bookmarks {
+  width: 135px;
+  height: 38px;
+
+  font-family: "Cuprum", Verdana, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #32425c;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+  border: 3px solid #63a63e;
+}
+
+.add-bookmarks:hover,
+.add-bookmarks:focus {
+  border: 3px solid #32425c;
+}
+
+.add-bookmarks:active {
+  opacity: 0.3;
+}
+
+/*стили для модалок*/
+
+.feedback-form label {
+  font-family: "Cuprum", Verdana, sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+}
+
+
+
+.feedback-window::-webkit-input-placeholder {color:#a9a9a9;}
+.feedback-window::-moz-placeholder          {color:#a9a9a9;}/* Firefox 19+ */
+.feedback-window:-moz-placeholder           {color:#a9a9a9;}/* Firefox 18- */
+.feedback-window:-ms-input-placeholder      {color:#a9a9a9;}
+
+.feedback-window::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+.feedback-window::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+.feedback-window:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+.feedback-window:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+.feedback-window:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+.feedback-window:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+.feedback-window:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+.feedback-window:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+
+.feedback-window {
+  font:inherit;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+  text-decoration: none;
+
+  border: 2px solid #d7dcde;
+}
+
+.feedback-window:hover,
+.feedback-window:focus {
+  border: 2px solid #b5b5b5;
+}
+
+.feedback-window:active {
+  border: 2px solid #ee3643;
+}
+
+.bottom-area {
+  background-color: #f4f4f4;
+}
+
+.feedback-button {
+  font-family: "Cuprum", Verdana, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background-color: #ee3643;
+}
+
+.added-product p {
+  font-family: "Cuprum", Verdana, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.order {
+  font-family: "Cuprum", Verdana, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background-color: #ee3643;
+}
+
+.continue-shopping {
+  font-family: "Cuprum", Verdana, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+}
