@@ -44,16 +44,16 @@ background-color: #f4f7f9;
   background-color: #293449
 }
 
-.top-header a:last-child {
+.top-header .order {
   background-color: #63a63e;
 }
 
-.top-header a:last-child:hover,
-.top-header a:last-child:focus {
+.top-header .order:hover,
+.top-header .order:focus {
   background-color: #5fbb2d;
 }
 
-.top-header a:last-child:active {
+.top-header .order:active {
   background-color: #518534;
 }
 
