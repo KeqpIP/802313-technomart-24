@@ -1,7 +1,7 @@
 body {
   margin: 0;
 
-  font-family: "PT Sans", Verdana, sans-serif;
+  font-family: "PT Sans", "Verdana", sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -34,7 +34,7 @@ background-color: #f4f7f9;
 
 .top-header,
 .top-header a {
-  font-family: "Cuprum", Verdana, sans-serif;
+  font-family: "Cuprum", "Verdana", sans-serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
@@ -111,7 +111,7 @@ background-color: #f4f7f9;
 
 
 h1 {
-  font-family: "Cuprum", Verdana, sans-serif;
+  font-family: "Cuprum", "Verdana", sans-serif;
   font-style: italic;
   font-size: 16px;
   line-height: 23px;
@@ -121,7 +121,7 @@ h1 {
 }
 
 .contacts-mini address {
-  font-family: "Cuprum", Verdana, sans-serif;
+  font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 14px;
   line-height: 24px;
@@ -133,7 +133,7 @@ h1 {
 }
 
 .contacts-mini a {
-  font-family: "Cuprum", Verdana, sans-serif;
+  font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 21px;
   line-height: 21px;
@@ -147,7 +147,7 @@ h1 {
 
 .login-link,
 .registration-link {
-  font-family: "Cuprum", Verdana, sans-serif;
+  font-family: "Cuprum", "Verdana", sans-serif;
   font-size: 21px;
   line-height: 21px;
   font-weight: 400;
@@ -181,7 +181,7 @@ a.profile:active {
 }
 
 .button-main {
-  font-family: "Cuprum", Verdana, sans-serif;
+  font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 17px;
   line-height: 17px;
@@ -202,7 +202,7 @@ a.profile:active {
 }
 
 .container h2 {
-  font-family: "Cuprum", Verdana, sans-serif;
+  font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 30px;
   line-height: 30px;
@@ -214,7 +214,7 @@ a.profile:active {
 }
 
 .transport-companies {
-  font-family: "Cuprum", Verdana, sans-serif;
+  font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 18px;
   line-height: 20px;
@@ -226,7 +226,7 @@ a.profile:active {
 }
 
 .button {
-  font-family: "Cuprum", Verdana, sans-serif;
+  font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 14px;
   line-height: 18px;
@@ -254,7 +254,7 @@ a.order:active {
 
 
 .top-footer {
-  font-family: "Cuprum", Verdana, sans-serif;
+  font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 18px;
   line-height: 24px;
@@ -292,7 +292,7 @@ a.order:active {
 }
 
 .bottom-footer {
-  font-family: "Cuprum", Verdana, sans-serif;
+  font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 16px;
   line-height: 18px;
@@ -329,7 +329,7 @@ a.order:active {
 /*Разметка каталога*/
 .my-orders,
 .profile {
-  font-family: "Cuprum", Verdana, sans-serif;
+  font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 16px;
   line-height: 18px;
@@ -341,7 +341,7 @@ a.order:active {
   background-color: #f2f6f8;
 }
 .user-navigation .user-link {
-  font-family: "Cuprum", Verdana, sans-serif;
+  font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 21px;
   line-height: 21px;
@@ -354,7 +354,7 @@ a.order:active {
 
 
 .breadcrumb a {
-  font-family: "PT Sans", Verdana, sans-serif;
+  font-family: "PT Sans", "Verdana", sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
@@ -365,7 +365,7 @@ a.order:active {
 }
 
 .store-selection h2 {
-  font-family: "Cuprum", Verdana, sans-serif;
+  font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 30px;
   line-height: 30px;
@@ -378,7 +378,7 @@ a.order:active {
 
 .name-section,
 .sort-type {
-  font-family: "PT Sans", Verdana, sans-serif;
+  font-family: "PT Sans", "Verdana", sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
@@ -409,7 +409,7 @@ a.order:active {
 }
 
 .filters h3 {
-  font-family: "PT Sans", Verdana, sans-serif;
+  font-family: "PT Sans", "Verdana", sans-serif;
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
@@ -456,7 +456,7 @@ ins {
   width: 135px;
   height: 38px;
 
-  font-family: "Cuprum", Verdana, sans-serif;
+  font-family: "Cuprum", "Verdana", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -479,7 +479,7 @@ ins {
   width: 135px;
   height: 38px;
 
-  font-family: "Cuprum", Verdana, sans-serif;
+  font-family: "Cuprum", "Verdana", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -502,7 +502,7 @@ ins {
 /*стили для модалок*/
 
 .feedback-form label {
-  font-family: "Cuprum", Verdana, sans-serif;
+  font-family: "Cuprum", "Verdana", sans-serif;
   font-size: 18px;
   line-height: 18px;
   font-weight: 400;
@@ -550,7 +550,7 @@ ins {
 }
 
 .feedback-button {
-  font-family: "Cuprum", Verdana, sans-serif;
+  font-family: "Cuprum", "Verdana", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -561,7 +561,7 @@ ins {
 }
 
 .added-product p {
-  font-family: "Cuprum", Verdana, sans-serif;
+  font-family: "Cuprum", "Verdana", sans-serif;
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
@@ -569,7 +569,7 @@ ins {
 }
 
 .order {
-  font-family: "Cuprum", Verdana, sans-serif;
+  font-family: "Cuprum", "Verdana", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -580,7 +580,7 @@ ins {
 }
 
 .continue-shopping {
-  font-family: "Cuprum", Verdana, sans-serif;
+  font-family: "Cuprum", "Verdana", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
