@@ -44,6 +44,19 @@ background-color: #f4f7f9;
   background-color: #293449
 }
 
+.top-header a:last-child {
+  background-color: #63a63e;
+}
+
+.top-header a:last-child:hover,
+.top-header a:last-child:focus {
+  background-color: #5fbb2d;
+}
+
+.top-header a:last-child:active {
+  background-color: #518534;
+}
+
 .search {
   border: 0px;
   background-color: transparent;
@@ -53,27 +66,50 @@ background-color: #f4f7f9;
   background-color: #ffffff;
 }
 
-/*Код для placeholder который заменяет цвет и убирает плавно текст при фокусе*/
-.search::-webkit-input-placeholder {color:#ffffff;}
-.search::-moz-placeholder          {color:#ffffff;}/* Firefox 19+ */
-.search:-moz-placeholder           {color:#ffffff;}/* Firefox 18- */
-.search:-ms-input-placeholder      {color:#ffffff;}
+/*Попытался их объединить, чтобы не дублировать, но они не работали. Возможно ли их объединить или всегда нужно отдельно задавать такие свойства?*/
+.search::-webkit-input-placeholder {
+  color:#ffffff;
+}
+.search::-moz-placeholder { /* Firefox 19+ */
+  color:#ffffff;
+}
+.search:-moz-placeholder { /* Firefox 18- */
+  color:#ffffff;
+}
+.search:-ms-input-placeholder {
+  color:#ffffff;
+}
 
-.search::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
-.search::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
-.search:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
-.search:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
-.search:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
-.search:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
-.search:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
-.search:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
-/*Не смог разобраться с тем, как убрать обводку при фокусе, то что нашёл в интернете почему-то не работало*/
+.search::-webkit-input-placeholder {
+  opacity: 1; transition: opacity 0.3s ease;
+}
+.search::-moz-placeholder {
+  opacity: 1; transition: opacity 0.3s ease;
+}
+.search:-moz-placeholder {
+  opacity: 1; transition: opacity 0.3s ease;
+}
+.search:-ms-input-placeholder {
+  opacity: 1; transition: opacity 0.3s ease;
+}
+.search:focus::-webkit-input-placeholder {
+  opacity: 0; transition: opacity 0.3s ease;
+}
+.search:focus::-moz-placeholder {
+  opacity: 0; transition: opacity 0.3s ease;
+}
+.search:focus:-moz-placeholder {
+  opacity: 0; transition: opacity 0.3s ease;
+}
+.search:focus:-ms-input-placeholder {
+  opacity: 0; transition: opacity 0.3s ease;
+}
 
 .top-header a:active {
   color: rgb(255, 255, 255, 0.6);
 }
 
-/* Почему-то, если я применяю это не для h1, а для класса promo, то не происходит никаких изменений */
+
 h1 {
   font-family: "Cuprum", Verdana, sans-serif;
   font-style: italic;
