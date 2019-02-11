@@ -205,12 +205,13 @@ background-color: #f4f7f9;
 }
 
 .user-navigation .login-link {
-  width: 120px;
+  padding: 14px 27px;
+
 }
 
 .user-navigation .registration-link {
-  width: 150px;
-  padding-right: 30px;
+  padding: 14px 27px;
+  margin-left: 10px;
 }
 
 h1 {
@@ -292,11 +293,12 @@ a.profile:active {
 
 .main-navigation .site-navigation {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 45px;
 }
 
 .button-main {
+  padding: 20px 32px;
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 17px;
@@ -445,19 +447,19 @@ a.order:active {
 }
 
 .footer-navigation {
-  padding: 10px;
+  padding: 20px;
 }
 
 .footer-navigation .site-navigation {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .footer-navigation .store-navigation {
   display: flex;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 
 .top-footer address {
