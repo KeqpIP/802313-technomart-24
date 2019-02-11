@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+  }
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  }
+
+path { fill:inherit; stroke:inherit; }
+
 body {
   margin: 0;
 
@@ -11,7 +21,7 @@ body {
   background-color: #ffffff;
 }
 
-a {
+a { /*Можно ли оставить такое свойство для всех ссылок или лучше для каждого класса отдельно прописать?*/
   text-decoration: none;
 }
 
@@ -32,7 +42,17 @@ a {
 background-color: #f4f7f9;
 }
 
-.top-header,
+.top-header {
+  font-family: "Cuprum", "Verdana", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: none;
+
+  background-color: #293449
+}
+
 .top-header a {
   font-family: "Cuprum", "Verdana", sans-serif;
   font-size: 17px;
@@ -44,7 +64,47 @@ background-color: #f4f7f9;
   background-color: #293449
 }
 
+.top-header-wrapper{
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.top-header .top-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-header .main-header-logo {
+  width: 220px;
+  height: 42px;
+  margin-right: 17px;
+  padding-top: 13px;
+  padding-left: 48px;
+
+  fill: #ffffff;
+  box-shadow: 0px 5px #b52933;
+  background-color: #ee3643
+}
+
+.top-header .bookmarks {
+  width: 150px;
+
+}
+
+.top-header .cart {
+  width: 150px;
+}
+
+
 .top-header .order {
+  width: 150px;
+  min-height: 42px;
+  margin-right: 10px;
+  padding-top: 12px;
+  text-align: center;
+
   background-color: #63a63e;
 }
 
@@ -58,6 +118,9 @@ background-color: #f4f7f9;
 }
 
 .search {
+  width: 255px;
+  min-height: 42px;
+  margin-right: 44px;
   border: 0px;
   background-color: transparent;
 }
@@ -66,7 +129,6 @@ background-color: #f4f7f9;
   background-color: #ffffff;
 }
 
-/*Попытался их объединить, чтобы не дублировать, но они не работали. Возможно ли их объединить или всегда нужно отдельно задавать такие свойства?*/
 .search::-webkit-input-placeholder {
   color:#ffffff;
 }
@@ -109,6 +171,47 @@ background-color: #f4f7f9;
   color: rgb(255, 255, 255, 0.6);
 }
 
+.center-header-wrapper {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.center-header .center-header-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-top: 44px;
+}
+
+.center-header h1 {
+ margin-left: 52px;
+ margin-right: 66px;
+ width: 280px;
+}
+
+.center-header .contacts-mini {
+  width: 280px;
+  align-self: center;
+  text-align: center;
+}
+
+.center-header-wrapper .user-navigation {
+  display: flex;
+  justify-content: space-around;
+  min-height: 45px;
+  width: 280px;
+}
+
+.user-navigation .login-link {
+  width: 120px;
+}
+
+.user-navigation .registration-link {
+  width: 150px;
+  padding-right: 30px;
+}
 
 h1 {
   font-family: "Cuprum", "Verdana", sans-serif;
@@ -142,6 +245,7 @@ h1 {
   text-transform: none;
 
   background-color: #f4f7f9;
+  border: 3px solid #ffffff;
 }
 
 
@@ -180,6 +284,18 @@ a.profile:active {
   color: rgb(50, 66, 92, 0.3);
 }
 
+.site-navigation {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.main-navigation .site-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 45px;
+}
+
 .button-main {
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
@@ -201,6 +317,28 @@ a.profile:active {
   color: rgb(255, 255, 255, 0.5)
 }
 
+.container-wrapper {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.container .container-wrapper {
+  display: flex;
+  justify-content: flex-start;
+
+  padding-top: 82px;
+}
+
+.company-promo{
+width: 525px;
+}
+
+.contacts {
+width: 375px;
+padding-left: 120px;
+}
+
 .container h2 {
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
@@ -214,6 +352,11 @@ a.profile:active {
 }
 
 .transport-companies {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100px;
+
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 18px;
@@ -252,6 +395,20 @@ a.order:active {
   background-color: #ba2732;
 }
 
+.top-footer-wrapper {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.top-footer .top-footer-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 145px;
+}
 
 .top-footer {
   font-family: "Cuprum", "Verdana", sans-serif;
@@ -263,6 +420,44 @@ a.order:active {
   text-transform: none;
 
   background-color: #32425c;
+}
+
+.top-footer .main-footer-logo {
+  width: 220px;
+  height: 63px;
+  margin-right: 17px;
+  padding-top: 13px;
+  padding-left: 48px;
+
+  fill: #ffffff;
+  box-shadow: 0px 5px #b52933;
+  background-color: #ee3643
+}
+
+.top-footer .footer-contacts {
+  order: 2;
+}
+
+.site-navigation {
+  width: 550px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.footer-navigation {
+  padding: 10px;
+}
+
+.footer-navigation .site-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-navigation .store-navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
 .top-footer address {
@@ -289,6 +484,37 @@ a.order:active {
 .footer-navigation a:active {
   text-decoration-line: none;
   opacity: 0.5;
+}
+
+.bottom-footer-wrapper {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.bottom-footer .bottom-footer-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer-copyright {
+  width: 232px;
+}
+
+.footer-social-wrapper {
+  width: 132px;
+
+}
+
+.footer-social .footer-social-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-social {
+  padding-right: 118px;
 }
 
 .bottom-footer {
