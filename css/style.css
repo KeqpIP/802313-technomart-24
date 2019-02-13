@@ -752,7 +752,13 @@ ins {
   align-items: center;
 }
 
+a.product {
+  margin-bottom: auto;
+  text-align: center;
+}
+
 .buy {
+  margin-top: 44px;
   width: 135px;
   height: 38px;
 
@@ -776,6 +782,7 @@ ins {
 }
 
 .add-bookmarks {
+  margin-top: 12px;
   width: 135px;
   height: 38px;
 
