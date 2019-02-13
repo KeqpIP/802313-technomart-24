@@ -34,7 +34,8 @@ a { /*Можно ли оставить такое свойство для все
 .sorting,
 .filters-company,
 .filters-type-power,
-.stock {
+.stock,
+.site-navigation-footer {
   list-style: none;
 }
 
@@ -65,7 +66,7 @@ background-color: #f4f7f9;
 }
 
 .top-header-wrapper{
-  width: 940px;
+  width: 960px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -118,7 +119,7 @@ background-color: #f4f7f9;
 }
 
 .search {
-  width: 255px;
+  flex-grow: 1;
   min-height: 42px;
   margin-right: 44px;
   border: 0px;
@@ -172,7 +173,7 @@ background-color: #f4f7f9;
 }
 
 .center-header-wrapper {
-  width: 940px;
+  width: 960px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -199,11 +200,13 @@ background-color: #f4f7f9;
 
 .center-header-wrapper .user-navigation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   min-height: 45px;
   width: 280px;
 }
 
+/*Добавил flex-wrap который нужен для каталога, но при этом изменилось положение кнопок на главной. нужно отдельный класс писать? потому что изменение размеров не помогли*/
 .user-navigation .login-link {
   padding: 14px 27px;
 
@@ -286,14 +289,13 @@ a.profile:active {
 }
 
 .site-navigation {
-  width: 940px;
+  width: 960px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
 .main-navigation .site-navigation {
   display: flex;
-  justify-content: center;
   margin-top: 45px;
 }
 
@@ -320,7 +322,7 @@ a.profile:active {
 }
 
 .container-wrapper {
-  width: 940px;
+  width: 960px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -398,7 +400,7 @@ a.order:active {
 }
 
 .top-footer-wrapper {
-  width: 940px;
+  width: 960px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -427,8 +429,7 @@ a.order:active {
 .top-footer .main-footer-logo {
   width: 220px;
   height: 63px;
-  margin-right: 17px;
-  padding-top: 13px;
+  padding-top: 19px;
   padding-left: 48px;
 
   fill: #ffffff;
@@ -440,7 +441,7 @@ a.order:active {
   order: 2;
 }
 
-.site-navigation {
+.site-navigation-footer {
   width: 550px;
   margin: 0 auto;
   padding: 0 10px;
@@ -450,15 +451,15 @@ a.order:active {
   padding: 20px;
 }
 
-.footer-navigation .site-navigation {
+.footer-navigation .site-navigation-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-end;
 }
 
 .footer-navigation .store-navigation {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-end;
 }
 
@@ -489,7 +490,7 @@ a.order:active {
 }
 
 .bottom-footer-wrapper {
-  width: 940px;
+  width: 960px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -555,6 +556,7 @@ a.order:active {
 }
 
 /*Разметка каталога*/
+
 .my-orders,
 .profile {
   font-family: "Cuprum", "Verdana", sans-serif;
@@ -580,8 +582,21 @@ a.order:active {
   background-color: #ffffff;
 }
 
+.breadcrumb-wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 auto;
+  padding-top: 50px;
+}
 
 .breadcrumb a {
+  padding-right: 40px;
+
   font-family: "PT Sans", "Verdana", sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -593,6 +608,10 @@ a.order:active {
 }
 
 .store-selection h2 {
+  padding: 34px 30px;
+  width: 960px;
+  margin: 0 auto;
+
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 30px;
@@ -604,6 +623,36 @@ a.order:active {
   background-color: #f2f6f8;
 }
 
+.sort-area,
+.sort-area p,
+p.name-section {
+  background-color: #f7f3ec;
+}
+
+p.name-section {
+  width: 220px;
+  padding-right: 20px;
+}
+
+.sort-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 960px;
+  margin: 0 auto;
+}
+
+.sort-area {
+  order: 2;
+  display: flex;
+  width: 710px;
+}
+
+.sorting { /*Каким образом можно сделать отступы между этими элементами? space-between не работает*/
+  display: flex;
+  justify-content: space-between;
+}
+
 .name-section,
 .sort-type {
   font-family: "PT Sans", "Verdana", sans-serif;
@@ -611,12 +660,15 @@ a.order:active {
   line-height: 18px;
   font-weight: 400;
   color: #000000;
-  text-transform: none;
+  text-transform: uppercase;
 
   background-color: #ffffff;
 }
 
-
+.filters-wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
 
 .sort-type {
   text-decoration-line: underline;
@@ -678,6 +730,26 @@ ins {
   text-decoration: none;
 
   background-color: #ee3643;
+}
+
+.stock-wrapper {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.stock {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.stock li {
+  width: 220px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .buy {
