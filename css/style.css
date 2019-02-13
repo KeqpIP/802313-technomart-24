@@ -628,8 +628,10 @@ a.order:active {
 p.name-section {
   background-color: #f7f3ec;
 }
-
+/*Не смог разобраться как сделать отступ между фильтрами и заголовком*/
 p.name-section {
+  margin-top: 0px;
+  margin-bottom: 0px;
   width: 220px;
   padding-right: 20px;
 }
@@ -643,14 +645,19 @@ p.name-section {
 }
 
 .sort-area {
+  margin-top: 0px;
+  margin-bottom: 0px;
   order: 2;
   display: flex;
+  align-content: center;
   width: 710px;
 }
 
 .sorting { /*Каким образом можно сделать отступы между этими элементами? space-between не работает*/
   display: flex;
   justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .name-section,
@@ -668,6 +675,10 @@ p.name-section {
 .filters-wrapper {
   width: 960px;
   margin: 0 auto;
+}
+
+.filters {
+  position: absolute;
 }
 
 .sort-type {
@@ -733,14 +744,14 @@ ins {
 }
 
 .stock-wrapper {
-  width: 700px;
+  width: 900px;
   margin: 0 auto;
 }
 
 .stock {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .stock li {
