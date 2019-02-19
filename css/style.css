@@ -25,6 +25,14 @@ a { /*Можно ли оставить такое свойство для все
   text-decoration: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 .user-navigation,
 .site-navigation,
 .transport-companies,
@@ -80,23 +88,35 @@ background-color: #f4f7f9;
 .top-header .main-header-logo {
   width: 220px;
   height: 42px;
-  margin-right: 17px;
   padding-top: 13px;
-  padding-left: 48px;
+  padding-left: 55px;
 
   fill: #ffffff;
   box-shadow: 0px 5px #b52933;
   background-color: #ee3643
 }
 
-.top-header .bookmarks {
-  width: 150px;
-
+.top-header .main-header-logo:hover {
+  background-color: #ca2c37;
+  box-shadow: 0px 5px #9a212a;
 }
 
+.top-header .main-header-logo:active {
+  background-color: #ba2732;
+  box-shadow: 0px 5px #8e1e26;
+}
+
+.top-header .bookmarks,
 .top-header .cart {
-  width: 150px;
+  min-width: 150px;
 }
+
+/*Как сделать, чтобы при клике менялся фон у всей нужной области, а не только ссылки?*/
+.top-header .bookmarks:active,
+.top-header .cart:active {
+  background-color: #161d29;
+}
+
 
 
 .top-header .order {
@@ -121,7 +141,7 @@ background-color: #f4f7f9;
 .search {
   flex-grow: 1;
   min-height: 42px;
-  margin-right: 44px;
+  min-width: 270px;
   border: 0px;
   background-color: transparent;
 }
@@ -180,20 +200,23 @@ background-color: #f4f7f9;
 
 .center-header .center-header-wrapper {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
 
-  margin-top: 44px;
+  padding-top: 44px;
+  padding-bottom: 60px;
 }
 
+/*Я не знаю как сделать перенос текста,
+как в макете без использования /br */
 .center-header h1 {
- margin-left: 52px;
- margin-right: 66px;
- width: 280px;
+ width: 310px;
+ padding-left: 55px;
 }
 
 .center-header .contacts-mini {
-  width: 280px;
+  width: 270px;
   align-self: center;
   text-align: center;
 }
@@ -202,19 +225,17 @@ background-color: #f4f7f9;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-self: flex-start;
   min-height: 45px;
-  width: 280px;
+  width: 310px;
 }
 
-/*Добавил flex-wrap который нужен для каталога, но при этом изменилось положение кнопок на главной. нужно отдельный класс писать? потому что изменение размеров не помогли*/
 .user-navigation .login-link {
   padding: 14px 27px;
-
 }
 
 .user-navigation .registration-link {
-  padding: 14px 27px;
-  margin-left: 10px;
+  padding: 14px 25px;
 }
 
 h1 {
@@ -239,15 +260,19 @@ h1 {
   background-color: #f4f7f9;
 }
 
-.contacts-mini a {
+
+.phone a {
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 21px;
-  line-height: 21px;
+  line-height: 45px;
   font-weight: 400;
   color: #ee3643;
   text-transform: none;
+  text-align: center;
+}
 
+.contacts-mini .phone {
   background-color: #f4f7f9;
   border: 3px solid #ffffff;
 }
@@ -257,7 +282,7 @@ h1 {
 .registration-link {
   font-family: "Cuprum", "Verdana", sans-serif;
   font-size: 21px;
-  line-height: 21px;
+  line-height: 45px;
   font-weight: 400;
   color: #000000;
   text-transform: none;
@@ -289,18 +314,16 @@ a.profile:active {
 }
 
 .site-navigation {
-  width: 960px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
-.main-navigation .site-navigation {
   display: flex;
   margin-top: 45px;
 }
-
+/*1) Как подвинуть меню навигации левее?
+Мб всё-таки нужно отдельно обёртку для центральной части и отдельно для навигации?
+2) При изменении масштаба появляются белые полосы между элементами.
+Как от них можно избавиться?*/
 .button-main {
-  padding: 20px 32px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 17px;
@@ -310,14 +333,49 @@ a.profile:active {
   text-transform: none;
 
   background-color: #32425c;
+  box-shadow: 0 5px #293449;
+}
+.site-navigation .main-page {
+  padding-left: 34px;
+  padding-right: 34px;
 }
 
-.main-navigation a:hover,
-.main-navigation a:focus {
+.site-navigation .company {
+  padding-left: 34px;
+  padding-right: 30px;
+}
+
+.site-navigation .catalog {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.site-navigation .news {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.site-navigation .special {
+  padding-left: 30px;
+  padding-right: 31px;
+}
+
+.site-navigation .delivery {
+  padding-left: 31px;
+  padding-right: 32px;
+}
+
+.site-navigation .cont {
+  padding-left: 33px;
+  padding-right: 33px;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
   background-color: #293449;
 }
 
-.main-navigation a:active {
+.site-navigation a:active {
   color: rgb(255, 255, 255, 0.5)
 }
 
@@ -329,18 +387,34 @@ a.profile:active {
 
 .container .container-wrapper {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: space-between;
 
-  padding-top: 82px;
+  padding-top: 85px;
 }
 
-.company-promo{
-width: 525px;
+.company-promo-1 {
+  margin-right: 115px;
+  width: 530px;
+}
+
+.company-promo-2 {
+  margin-top: 15px;
+  width: 400px;
 }
 
 .contacts {
-width: 375px;
-padding-left: 120px;
+width: 390px;
+min-height: 470px;
+}
+
+.map-legend {
+  width: 180px;
+}
+
+.map {
+  margin-top: 20px;
+  margin-bottom: 35px;
 }
 
 .container h2 {
@@ -360,6 +434,7 @@ padding-left: 120px;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100px;
+  margin-bottom: 40px;
 
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
@@ -373,19 +448,32 @@ padding-left: 120px;
 }
 
 .button {
+  display: table-cell;
+  height: 38px;
+  width: 220px;
+  background-color: #ee3643;
+  text-align: center;
+  vertical-align: middle;
+
+  border-radius: 3px;
+}
+
+.contacts .button {
+  width: 300px;
+}
+
+.button a {
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 38px;
   font-weight: 400;
   color: #ffffff;
   text-transform: uppercase;
-
-  background-color: #ee3643;
 }
 
-a.button:hover,
-a.button:focus,
+.button:hover,
+.button:focus,
 .feedback-button:hover,
 .feedback-button:focus,
 a.order:hover,
@@ -393,7 +481,7 @@ a.order:focus {
   background-color: #ca2c37;
 }
 
-a.button:active,
+.button:active,
 .feedback-button:active,
 a.order:active {
   background-color: #ba2732;
@@ -430,30 +518,54 @@ a.order:active {
   width: 220px;
   height: 63px;
   padding-top: 19px;
-  padding-left: 48px;
+  padding-left: 42px;
 
   fill: #ffffff;
   box-shadow: 0px 5px #b52933;
   background-color: #ee3643
 }
 
-.top-footer .footer-contacts {
-  order: 2;
+.top-footer .main-footer-logo:hover {
+  background-color: #ca2c37;
+  box-shadow: 0px 5px #9a212a;
+}
+
+.top-footer .main-footer-logo:active {
+  background-color: #ba2732;
+  box-shadow: 0px 5px #8e1e26;
+}
+
+.top-footer-wrapper .logo-contacts-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .site-navigation-footer {
-  width: 550px;
+  width: 570px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
+.button-footer {
+  font-family: "Cuprum", "Verdana", sans-serif;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 17px;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: none;
+
+  background-color: #32425c;
+}
+
 .footer-navigation {
-  padding: 20px;
+  padding-top: 40px;
+
 }
 
 .footer-navigation .site-navigation-footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-end;
 }
 
@@ -461,6 +573,11 @@ a.order:active {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+.footer-contacts {
+  padding-bottom: 55px;
+  margin-top: 30px;
 }
 
 .top-footer address {
@@ -473,7 +590,7 @@ a.order:active {
   background-color: #32425c;
 }
 
-.store-navigation .button-main{
+.store-navigation .button-footer{
   color: #ffd180;
 
   background-color: #32425c;
@@ -491,23 +608,34 @@ a.order:active {
 
 .bottom-footer-wrapper {
   width: 960px;
+  min-height: 107px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
 .bottom-footer .bottom-footer-wrapper {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
 }
 
 .footer-copyright {
-  width: 232px;
+  width: 300px;
 }
 
 .footer-social-wrapper {
-  width: 132px;
+  width: 160px;
+  margin: 0 100px;
+}
 
+.feedback-developed-wrapper {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-feedback {
+  margin-right: 50px;
 }
 
 .footer-social .footer-social-wrapper {
@@ -516,9 +644,7 @@ a.order:active {
   align-items: center;
 }
 
-.footer-social {
-  padding-right: 118px;
-}
+
 
 .bottom-footer {
   font-family: "Cuprum", "Verdana", sans-serif;
@@ -570,11 +696,21 @@ a.order:active {
 
   background-color: #f2f6f8;
 }
+
+.user-area {
+
+min-width: 310px;
+min-height: 45px;
+background-color: #ffffff;
+text-align: center;
+
+}
+
 .user-navigation .user-link {
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 21px;
-  line-height: 21px;
+  line-height: 45px;
   font-weight: 400;
   color: #000000;
   text-transform: none;
@@ -623,7 +759,41 @@ a.order:active {
   background-color: #f2f6f8;
 }
 
-.sort-area,
+.store-wrapper {
+  display: flex;
+  width: 960px;
+  margin: 0 auto;
+  min-height: 38px;
+}
+
+.store {
+  margin-top: 20px;
+  margin-bottom: 60px;
+  display: flex;
+}
+
+.filters-wrapper {
+  margin-right: 20px;
+  width: 220px;
+  display: flex;
+  flex-flow: column;
+
+}
+
+/*Как сделать выравнивание в центре по вертикали для данных элементов? */
+.sort-area {
+  width: 720px;
+  display: flex;
+  flex-flow: column;
+
+}
+
+.name-section {
+  min-height: 38px;
+  padding-left: 18px;
+}
+
+.sort-wrapper,
 .sort-area p,
 p.name-section {
   background-color: #f7f3ec;
@@ -640,20 +810,13 @@ p.name-section {
   display: flex;
   justify-content: space-between;
   align-content: center;
-  width: 960px;
-  margin: 0 auto;
+
 }
 
-.sort-area {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  order: 2;
-  display: flex;
-  align-content: center;
-  width: 710px;
-}
+
 
 .sorting { /*Каким образом можно сделать отступы между этими элементами? space-between не работает*/
+  width: 560px;
   display: flex;
   justify-content: space-between;
   margin-top: 0px;
@@ -672,20 +835,16 @@ p.name-section {
   background-color: #ffffff;
 }
 
-.filters-wrapper {
-  width: 960px;
-  margin: 0 auto;
-}
-
-.filters {
-  position: absolute;
-}
 
 .sort-type {
   text-decoration-line: underline;
   text-decoration-style: dotted;
   text-decoration-color: #ee3643;
   color: rgba(0, 0, 0, 0.3);
+}
+
+.up {
+  margin-left: 45px;
 }
 
 .sorting a:hover,
@@ -724,6 +883,8 @@ p.name-section {
   color: #000000;
 }
 
+
+
 del {
   font:inherit;
   font-size: 17px;
@@ -733,6 +894,13 @@ del {
 }
 
 ins {
+  width:140px;
+  min-height: 38px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  margin-top: 13px;
+
+
   font:inherit;
   font-size: 17px;
   line-height: 18px;
@@ -740,27 +908,99 @@ ins {
   color: #ffffff;
   text-decoration: none;
 
+
   background-color: #ee3643;
 }
 
+ins::after {
+  content: "";
+
+  position: absolute;
+  bottom: 20px;
+  right:  20px;
+
+  width: 0;
+  height: 0;
+
+  border: 19px solid white;
+  border-left-color: #ee3643;
+}
+
+
+
 .stock-wrapper {
-  width: 900px;
-  margin: 0 auto;
+  width: 720px;
+
 }
 
 .stock {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
+/*Как сделать, чтобы название переносилось также как на макете без /br ?*/
 .stock li {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 220px;
+  margin-bottom: 20px;
+
+
+  line-height: 20px;
+  font-weight: bold;
+  text-align: center;
+
+  border: 1px solid #ccc;
+
+  /*
   width: 220px;
   min-height: 320px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
+}
+
+/*Почему-то не работает данный код, хотя сделал точь-в-точь как в демке*/
+li .flag {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+
+  width: 60px;
+  height: 60px;
+
+  text-indent: -1000px;
+  overflow: hidden;
+  z-index: 20;
+}
+
+li .flag-new {
+  background: url("img/new-flag.png") no-repeat 0 0;
+}
+
+li .actions {
+  display: none;
+}
+
+li:hover .actions {
+  display: block;
+}
+
+li .actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 218px;
+  height: 180px;
+  padding: 10px 0;
+
+  background-color: rgba(255,255,255);
+  z-index: 10;
 }
 
 a.product {
