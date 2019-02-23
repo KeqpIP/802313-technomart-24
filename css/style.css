@@ -21,16 +21,29 @@ body {
   background-color: #ffffff;
 }
 
+img{
+  max-width: 100%;
+  height: auto;
+}
+
 a { /*Можно ли оставить такое свойство для всех ссылок или лучше для каждого класса отдельно прописать?*/
   text-decoration: none;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
-  clip: rect(0 0 0 0);
+
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .user-navigation,
@@ -89,7 +102,7 @@ background-color: #f4f7f9;
   width: 220px;
   height: 42px;
   padding-top: 13px;
-  padding-left: 55px;
+  padding-left: 45px;
 
   fill: #ffffff;
   box-shadow: 0px 5px #b52933;
@@ -108,10 +121,63 @@ background-color: #f4f7f9;
 
 .top-header .bookmarks,
 .top-header .cart {
-  min-width: 150px;
+  position: relative;
+  display: block;
+  max-width: 150px;
+  padding: 12px 40px;
+
+  vertical-align: middle;
 }
 
-/*Как сделать, чтобы при клике менялся фон у всей нужной области, а не только ссылки?*/
+.top-header .bookmarks::before {
+  content: '';
+
+  position: absolute;
+  top: 12px;
+  left: 17px;
+
+  width: 16px;
+  height: 18px;
+
+  background-image: url("../img/icon-bookmark.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.3;
+}
+
+.top-header .cart::before {
+  content: '';
+
+  position: absolute;
+  top: 12px;
+  left: 17px;
+
+  width: 16px;
+  height: 18px;
+
+  background-image: url("../img/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.3;
+}
+
+.top-header .bookmarks:hover,
+.top-header .cart:hover {
+  background-color: #212a3a;
+}
+
+.top-header .bookmarks:hover::before,
+.top-header .cart:hover::before {
+  opacity: 1;
+}
+
+.top-header .bookmarks:active::before,
+.top-header .cart:active::before {
+  opacity: 0.5;
+}
+
 .top-header .bookmarks:active,
 .top-header .cart:active {
   background-color: #161d29;
@@ -138,12 +204,30 @@ background-color: #f4f7f9;
   background-color: #518534;
 }
 
+.search-form {
+  display: flex;
+}
+
+/*1) Как сделать заливку иконки белой? через fill не работает*/
+.icon-search {
+  border: 0px;
+  min-width: 49px;
+  min-height: 42px;
+  padding-top: 5px;
+  background-color: #293449;
+}
+
 .search {
   flex-grow: 1;
   min-height: 42px;
   min-width: 270px;
   border: 0px;
   background-color: transparent;
+}
+/*2) Как сделать синхронное поведение для наведения и фокуса кнопки+формы ввода? Кнопка не меняет свой цвет при наведении на input*/
+.search-form:hover,
+.icon-search:hover {
+  background-color: #212a3a;
 }
 
 .search:focus {
@@ -228,6 +312,9 @@ background-color: #f4f7f9;
   align-self: flex-start;
   min-height: 45px;
   width: 310px;
+
+  margin: 5 auto;
+  padding: 0;
 }
 
 .user-navigation .login-link {
@@ -273,13 +360,32 @@ h1 {
 }
 
 .contacts-mini .phone {
+  position: relative;
   background-color: #f4f7f9;
   border: 3px solid #ffffff;
 }
 
+.contacts-mini .phone::before {
+  content: '';
+
+  position: absolute;
+  top: 13px;
+  left: 15px;
+
+  width: 19px;
+  height: 19px;
+
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 1;
+}
 
 .login-link,
 .registration-link {
+  position: relative;
+
   font-family: "Cuprum", "Verdana", sans-serif;
   font-size: 21px;
   line-height: 45px;
@@ -289,6 +395,27 @@ h1 {
   text-decoration: none;
 
   background-color: #ffffff;
+}
+
+.user-navigation .login-link {
+  padding-left: 45px;
+}
+
+.login-link::before {
+  content: '';
+
+  position: absolute;
+  top: 18px;
+  left: 13px;
+
+  width: 24px;
+  height: 20px;
+
+  background-image: url("../img/icon-login.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 1;
 }
 
 a.login-link:hover,
@@ -302,6 +429,12 @@ a.profile:focus {
   color: #ee3643;
 }
 
+/*Тоже не работает заливка для svg*/
+a.login-link:hover::before path,
+a.registration-link:hover::before path {
+  fill: #212a3a;
+}
+
 a.login-link:active,
 a.registration-link:active,
 a.user-link:active {
@@ -313,12 +446,16 @@ a.profile:active {
   color: rgb(50, 66, 92, 0.3);
 }
 
+ul.site-navigation {
+  margin: 45 auto;
+  padding: 0;
+}
+
 .site-navigation {
   display: flex;
   margin-top: 45px;
 }
-/*1) Как подвинуть меню навигации левее?
-Мб всё-таки нужно отдельно обёртку для центральной части и отдельно для навигации?
+/*1) Как подвинуть меню навигации правее?
 2) При изменении масштаба появляются белые полосы между элементами.
 Как от них можно избавиться?*/
 .button-main {
@@ -573,6 +710,7 @@ a.order:active {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  margin-top: 30px;
 }
 
 .footer-contacts {
@@ -640,11 +778,21 @@ a.order:active {
 
 .footer-social .footer-social-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
+/*Тут я пытался с помощью фона создать круги, но они почему-то не появляются*/
+.social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
 
+  background-color: #212a3a;
+  border-radius: 20px;
+}
 
 .bottom-footer {
   font-family: "Cuprum", "Verdana", sans-serif;
@@ -697,16 +845,21 @@ a.order:active {
   background-color: #f2f6f8;
 }
 
-.user-area {
+/*Между ссылками мои заказы и личный кабинет есть точка. 
+Как её вставить? Через псевдоэлементы она будет реагировать на наведения
+Я предполагаю, что эта svg должна быть непосредственно в коде каталога?*/
 
-min-width: 310px;
-min-height: 45px;
-background-color: #ffffff;
-text-align: center;
+.user-area {
+  position: relative;
+  min-width: 310px;
+  min-height: 45px;
+  background-color: #ffffff;
+  text-align: center;
 
 }
 
 .user-navigation .user-link {
+  display: inline-block;
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 21px;
@@ -716,6 +869,43 @@ text-align: center;
   text-transform: none;
 
   background-color: #ffffff;
+  border: 3px solid #ffffff;
+}
+
+.user-link::before {
+  content: '';
+
+  position: absolute;
+  top: 15px;
+  left: 13px;
+
+  width: 24px;
+  height: 20px;
+
+  background-image: url("../img/icon-user.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 1;
+}
+
+/*Как сделать этот элемент ссылкой на разлогинивание? 
+Или же нужно создавать внутри дива отдельную ссылку logout и вместо текста вставлять это изображение?*/
+.user-link::after {
+  content: '';
+
+  position: absolute;
+  top: 16px;
+  right: 10px;
+
+  width: 21px;
+  height: 19px;
+
+  background-image: url("../img/icon-logout.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 1;
 }
 
 .breadcrumb-wrapper {
@@ -809,7 +999,7 @@ p.name-section {
 .sort-wrapper {
   display: flex;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
 
 }
 
@@ -945,7 +1135,7 @@ ins::after {
   display: flex;
   flex-flow: column;
   align-items: center;
-  width: 220px;
+  width: 218px;
   margin-bottom: 20px;
 
 
@@ -995,7 +1185,7 @@ li .actions {
   top: 0;
   left: 0;
 
-  width: 218px;
+  width: 216px;
   height: 180px;
   padding: 10px 0;
 
