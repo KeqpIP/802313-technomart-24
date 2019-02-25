@@ -1210,7 +1210,7 @@ a.order:active {
   background-repeat: no-repeat;
   background-position: 0 0;
 
-  opacity: 1;  
+  opacity: 1;
 }
 
 .breadcrumb li:last-child::after {
@@ -1352,7 +1352,7 @@ p.name-section {
 
   background-color: #ffffff;
   border: 1px solid #e5e5e5;
-  border-radius: 2px;  
+  border-radius: 2px;
 }
 
 .sort-type {
@@ -1465,18 +1465,21 @@ ins::after {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 20 auto;
+  margin: 0 auto;
   padding: 0;
+  margin-left: -20px;
 }
 
 /*Как сделать, чтобы название переносилось также как на макете без /br ?*/
 .stock li {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   flex-flow: column;
   align-items: center;
-  width: 218px;
-  margin-bottom: 20px;
+  width: 222px;
+  margin-top: 20px;
+  margin-left: 20px;
 
 
   line-height: 20px;
