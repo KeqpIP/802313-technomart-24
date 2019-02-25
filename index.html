@@ -23,9 +23,9 @@
       </svg>
     </a>
     <form class="search-form" method="POST" action="https://echo.htmlacademy.ru">
-      <button class="icon-search" type="submit">
+      <button class="button-search" type="submit">
           <span class="visually-hidden">Найти</span>
-          <svg
+          <svg class="icon-search"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
           width="17" height="17" viewBox="0 0 17 17">
@@ -332,23 +332,30 @@
   </p>
 </div>
 
-<div class="modal feedback visually-hidden">
-  <button class="close" aria-label="Закрыть окно">Закрыть</button>
-  <form class="feedback-form" action="https://echo.htmlacademy.ru" method="POST">
-    <p>
-      <label class="name" for="form-name">Ваше имя:</label>
-      <input class="feedback-window" type="text" id="form-name" placeholder="Имя Фамилия">
-    </p>
-    <p>
-      <label class="email" for="form-email">Ваше e-mail:</label>
-      <input class="feedback-window" type="text" id="form-email" placeholder="email@example.com">
-    </p>
-    <p>
-      <label class="message" for="form-message">Текст письма:</label>
-      <input class="feedback-window" type="text" id="form-message" placeholder="В свободной форме">
-    </p>
-    <div class="modal bottom-area">
-      <button class="feedback-button" type="submit">
+<div class="modal feedback vissualy-hidden">
+  <button class="close" id="close-button" aria-label="Закрыть окно">
+    <svg id="close-icon" class="close-icon" enable-background="new 0 0 21 21"
+    height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
+    <path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z" fill="#ee3643"/>
+    </svg>
+  </button>
+  <form action="https://echo.htmlacademy.ru" method="POST">
+    <div class="feedback-form">
+      <div class="modal-name">
+        <label class="name" for="form-name">Ваше имя:</label>
+        <input class="feedback-window" type="text" id="form-name" placeholder="Имя Фамилия">
+      </div>
+      <div class="modal-email">
+        <label class="email" for="form-email">Ваше e-mail:</label>
+        <input class="feedback-window" type="text" id="form-email" placeholder="email@example.com">
+      </div>
+      <div class="modal-message">
+        <label class="message" for="form-message">Текст письма:</label>
+        <textarea class="feedback-window feedback-message" id="form-message" placeholder="В свободной форме"></textarea>
+      </div>
+    </div>
+    <div class="bottom-area">
+      <button class="button feedback-button" type="submit">
         Отправить
       </button>
     </div>

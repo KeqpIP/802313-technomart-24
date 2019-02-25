@@ -209,13 +209,29 @@ background-color: #f4f7f9;
   display: flex;
 }
 
-/*1) Как сделать заливку иконки белой? через fill не работает*/
-.icon-search {
-  border: 0px;
-  min-width: 49px;
-  min-height: 42px;
-  padding-top: 5px;
+
+.button-search {
+  font-size: 0;
+  background-color: transparent;
+
+  border: 0;
+  width: 42px;
+  height: 42px;
   background-color: #293449;
+
+  cursor: pointer;
+}
+
+.icon-search {
+  fill: #ffffff4d;
+}
+
+.icon-search:hover {
+  fill: #ffffff;
+}
+
+.icon-search:active {
+  fill: #ee3643;
 }
 
 .search {
@@ -227,7 +243,7 @@ background-color: #f4f7f9;
 }
 /*2) Как сделать синхронное поведение для наведения и фокуса кнопки+формы ввода? Кнопка не меняет свой цвет при наведении на input*/
 .search-form:hover,
-.icon-search:hover {
+.button-search:hover {
   background-color: #212a3a;
 }
 
@@ -573,7 +589,7 @@ ul.site-navigation {
   margin-left: 25px;
   padding: 12px 12px;
   background-color: rgba(0, 0, 0, 0.1);
-  text-align: center;
+  border-radius: 3px;
 
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
@@ -582,9 +598,17 @@ ul.site-navigation {
   font-weight: 400;
   color: #ffffff;
   text-transform: uppercase;
+  text-align: center;
 }
 
+.menu-button:hover,
+.menu-button:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
 
+.menu-button:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
 
 .menu-slider {
   width: 620px;
@@ -1116,6 +1140,8 @@ a.order:active {
   border: 3px solid #ffffff;
 }
 
+/* Вставлю эти картинки в html + добавлю ссылку для logout
+
 .user-link::before {
   content: '';
 
@@ -1133,8 +1159,6 @@ a.order:active {
   opacity: 1;
 }
 
-/*Как сделать этот элемент ссылкой на разлогинивание?
-Или же нужно создавать внутри дива отдельную ссылку logout и вместо текста вставлять это изображение?*/
 .user-link::after {
   content: '';
 
@@ -1152,16 +1176,45 @@ a.order:active {
   opacity: 1;
 }
 
+*/
+
 .breadcrumb-wrapper {
   width: 960px;
   margin: 0 auto;
 }
 
+
+
 .breadcrumb {
   display: flex;
   justify-content: flex-start;
   margin: 0 auto;
-  padding-top: 50px;
+  padding: 12px 0;
+}
+
+.breadcrumb li {
+  position: relative;
+}
+
+.breadcrumb li::after {
+  content: '';
+
+  position: absolute;
+  top: 5px;
+  right: 15px;
+
+  width: 8px;
+  height: 12px;
+
+  background-image: url("../img/icon-right-small.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 1;  
+}
+
+.breadcrumb li:last-child::after {
+  content: none;
 }
 
 .breadcrumb a {
@@ -1283,6 +1336,24 @@ p.name-section {
   background-color: #ffffff;
 }
 
+.show {
+  display: table-cell;
+  height: 38px;
+  width: 140px;
+  margin-top: 75px;
+  font-family: "PT Sans", "Verdana", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;  
+}
 
 .sort-type {
   text-decoration-line: underline;
@@ -1302,9 +1373,17 @@ p.name-section {
   color: #ee3643;
 }
 
-.value a:hover path,
-.value a:focus path {
-  fill
+.icon-value {
+  fill: #c5c5c5;
+}
+
+.icon-value:hover,
+.icon-value:focus {
+  fill: #000000;
+}
+
+.icon-value:active {
+  fill: #ee3643;
 }
 
 .filters h3 {
@@ -1479,6 +1558,7 @@ a.product {
   border-radius: 2px;
   border: none;
   box-shadow: 0 3px #367315;
+  cursor: pointer;
 
 }
 
@@ -1508,6 +1588,7 @@ a.product {
   background-color: #ffffff;
   border: 3px solid #63a63e;
   border-radius: 2px;
+  cursor: pointer;
 }
 
 .add-bookmarks:hover,
@@ -1522,6 +1603,79 @@ a.product {
 
 /*стили для модалок*/
 
+.modal {
+  position: fixed;
+  background-color: #ffffff;
+}
+
+.feedback {
+  bottom: 200px;
+  left: 50%;
+  margin-left: -310px;
+  width: 620px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 55px;
+  box-shadow: 0 20px 40px rgb(0, 0, 0, 0.75);
+
+  border-top: 7px solid #ff5257;
+}
+
+.close {
+  position: absolute;
+  top: 9px;
+  right: 11px;
+  width: 21px;
+  height: 21px;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+
+  cursor: pointer;
+}
+
+.close-icon {
+  fill: #ee3643;
+}
+
+.close:active {
+  outline: none;
+}
+
+.feedback-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 460px;
+
+}
+
+
+.modal-name,
+.modal-email,
+.modal-message {
+  display: flex;
+  flex-flow: column;
+}
+
+.modal-name,
+.modal-email {
+  width: 220px;
+}
+
+.modal-message {
+  width: 460px;
+  margin-top: 22px;
+}
+
+.bottom-area {
+  background-color: #f4f4f4;
+  width: 620px;
+  margin-top: 37px;
+  margin-left: -80px;
+  height: 112px;
+}
+
 .feedback-form label {
   font-family: "Cuprum", "Verdana", sans-serif;
   font-size: 18px;
@@ -1530,12 +1684,15 @@ a.product {
   color: #000000;
 }
 
+.feedback-window::-webkit-input-placeholder {color:#a9a9a9; padding-left: 15px;}
+.feedback-window::-moz-placeholder          {color:#a9a9a9; padding-left: 15px;}/* Firefox 19+ */
+.feedback-window:-moz-placeholder           {color:#a9a9a9; padding-left: 15px;}/* Firefox 18- */
+.feedback-window:-ms-input-placeholder      {color:#a9a9a9; padding-left: 15px;}
 
-
-.feedback-window::-webkit-input-placeholder {color:#a9a9a9;}
-.feedback-window::-moz-placeholder          {color:#a9a9a9;}/* Firefox 19+ */
-.feedback-window:-moz-placeholder           {color:#a9a9a9;}/* Firefox 18- */
-.feedback-window:-ms-input-placeholder      {color:#a9a9a9;}
+.feedback-message::-webkit-input-placeholder {color:#a9a9a9; padding-left: 15px; padding-top: 10px;}
+.feedback-message::-moz-placeholder          {color:#a9a9a9; padding-left: 15px; padding-top: 10px;}/* Firefox 19+ */
+.feedback-message:-moz-placeholder           {color:#a9a9a9; padding-left: 15px; padding-top: 10px;}/* Firefox 18- */
+.feedback-message:-ms-input-placeholder      {color:#a9a9a9; padding-left: 15px; padding-top: 10px;}
 
 .feedback-window::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
 .feedback-window::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
@@ -1554,7 +1711,14 @@ a.product {
   color: #000000;
   text-decoration: none;
 
+  min-height: 38px;
+  margin-top: 13px;
   border: 2px solid #d7dcde;
+}
+
+.feedback-message {
+  min-height: 115px;
+  resize: none;
 }
 
 .feedback-window:hover,
@@ -1566,11 +1730,8 @@ a.product {
   border: 2px solid #ee3643;
 }
 
-.bottom-area {
-  background-color: #f4f4f4;
-}
-
-.feedback-button {
+button.feedback-button {
+  width: 460px;
   font-family: "Cuprum", "Verdana", sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -1579,6 +1740,10 @@ a.product {
   text-transform: uppercase;
 
   background-color: #ee3643;
+  border: 0;
+  border-radius: 3px;
+  margin: 37px 80px;
+  cursor: pointer;
 }
 
 .added-product p {
