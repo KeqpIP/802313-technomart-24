@@ -128,7 +128,6 @@ background-color: #f4f7f9;
   max-width: 150px;
   padding: 12px 40px;
 
-  vertical-align: middle;
 }
 
 .top-header .bookmarks::before {
@@ -567,6 +566,16 @@ ul.site-navigation {
   flex-flow: column;
   width: 300px;
   min-height: 123px;
+  margin-top: 20px;
+}
+
+.menu-promotions {
+  order: 1;
+  align-self: flex-start;
+}
+.menu-delivery {
+  order: 2;
+
 }
 
 .menu-bio {
@@ -617,6 +626,7 @@ ul.site-navigation {
   background-color: #000000;
   background-repeat: no-repeat;
   background-position: top center;
+  margin-top: 20px;
 }
 
 .slide h3 {
@@ -899,7 +909,6 @@ ul.popular-brands-wrapper {
 
 .brand a {
   display: block;
-  vertical-align: middle;
   text-align: center;
 }
 
@@ -1383,7 +1392,7 @@ a.order:active {
 
 }
 
-/*Как сделать выравнивание в центре по вертикали для данных элементов? */
+
 .sort-area {
   width: 720px;
   display: flex;
@@ -1391,6 +1400,7 @@ a.order:active {
 
 }
 
+/*Как сделать выравнивание в центре по вертикали для данных элементов? */
 .name-section {
   min-height: 38px;
   padding-left: 18px;
@@ -1416,7 +1426,103 @@ p.name-section {
 
 }
 
+.cost-filter {
+  margin-top: 13px;
+  padding: 0;
 
+  border: none;
+}
+
+.range-filter {
+  width: 220px;
+  margin-top: 21px;
+}
+
+.range-controls {
+  position: relative;
+
+  height: 80px;
+  margin-bottom: 10px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  background-color: #f7f3ec;
+
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 85%;
+  height: 2px;
+
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+
+  box-sizing: content-box;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #e0ddd8;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+
+.price-controls {
+  display: inline-block;
+}
+
+.price-controls span {
+  margin-left: 5px;
+  margin-right: 4px;
+
+  font-family: "PT Sans", "Verdana", sans-serif;
+  line-height: 18px;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #444444;
+}
+
+.price-controls input {
+  width: 95px;
+  height: 38px;
+
+  font-family: "PT Sans", "Verdana", sans-serif;
+  line-height: 18px;
+  font-size: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+
+  border: none;
+  border-radius: 3px;
+  background: #f7f3ec;
+}
 
 .sorting { /*Каким образом можно сделать отступы между этими элементами? space-between не работает*/
   width: 560px;
@@ -1502,7 +1608,8 @@ p.name-section {
   fill: #ee3643;
 }
 
-.filters h3 {
+.filters h3,
+.filters legend {
   font-family: "PT Sans", "Verdana", sans-serif;
   font-size: 17px;
   line-height: 30px;
@@ -1613,7 +1720,6 @@ ins::after {
   align-items: center; */
 }
 
-/*Почему-то не работает данный код, хотя сделал точь-в-точь как в демке*/
 li .flag {
   position: absolute;
   top: -1px;
@@ -1628,7 +1734,7 @@ li .flag {
 }
 
 li .flag-new {
-  background: url("img/new-flag.png") no-repeat 0 0;
+  background: url("../img/new-flag.png") no-repeat 0 0;
 }
 
 li .actions {
@@ -1739,6 +1845,15 @@ a.product {
   box-shadow: 0 20px 40px rgb(0, 0, 0, 0.75);
 
   border-top: 7px solid #ff5257;
+}
+
+.modal-map {
+  bottom: 300px;
+  left: 25%;
+  margin-left: 100px;
+  width: 972px;
+  height: 476px;
+  box-shadow: 0 20px 40px rgb(0, 0, 0, 0.75);
 }
 
 .close {

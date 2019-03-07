@@ -1,6 +1,6 @@
   var link = document.querySelector(".feedback-link");
   var popup = document.querySelector(".feedback");
-  var close = feedback.querySelector(".close");
+  var close = document.querySelector(".close");
 
   link.addEventListener("click", function (evt) {
     evt.preventDefault();

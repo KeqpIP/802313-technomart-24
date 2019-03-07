@@ -116,8 +116,25 @@
     <div class="filters-wrapper">
     <p class="name-section">Фильтр:</p>
     <form class="filters" method="GET" action="https://echo.htmlacademy.ru">
-      <h3>Цена:</h3>
-      <input type="range" min="0" max="35000" step="100" value=""> <!--черновик для ползунка-->
+      <fieldset class="cost-filter">
+        <legend>Цена:</legend>
+        <div class="range-filter">
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar"></div>
+            </div>
+            <div class="toggle toggle-min"></div>
+            <div class="toggle toggle-max"></div>
+          </div>
+          <div class="price-controls">
+            <input name="min-price" type="text" value="0"></label>
+            <span>—</span>
+            <input name="max-price" type="text" value="30000"></label>
+          </div>
+
+        </div>
+      </fieldset>
+
       <h3>Производители:</h3>
       <ul class="filters-company">
         <li>
