@@ -58,7 +58,8 @@ a { /*Можно ли оставить такое свойство для все
 .stock,
 .site-navigation-footer,
 .popular-brands-wrapper,
-.menu-slider-list {
+.menu-slider-list,
+.services-slider-list {
   list-style: none;
 }
 
@@ -912,6 +913,58 @@ ul.popular-brands-wrapper {
   text-align: center;
 }
 
+.services {
+  margin-top: 65px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 68px;
+  width: 960px;
+  background-color: #f4f7f9;
+}
+
+.services-bio {
+  width: 400px;
+}
+
+.services-slider {
+  display: flex;
+  width: 960;
+}
+
+.services-slider-item {
+  display: flex;
+}
+
+.services-slider-item h3{
+  font-family: "Cuprum", "Verdana", sans-serif;
+  font-style: normal;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  color: #32425c;
+  text-transform: uppercase;
+}
+
+.services-slider-item p {
+  margin: 0;
+
+  font-family: "PT Sans", "Verdana", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: none;
+}
+
+.slide-bio-delivery,
+.slide-bio-credit {
+  width: 280px;
+}
+
+.slide-bio-guarantee {
+  width: 380px;
+}
+
 .container .container-wrapper {
   display: flex;
   justify-content: space-between;
@@ -952,8 +1005,6 @@ min-height: 470px;
   font-weight: 400;
   color: #000000;
   text-transform: uppercase;
-
-  background-color: #ffffff;
 }
 
 .transport-companies {
