@@ -928,11 +928,37 @@ ul.popular-brands-wrapper {
 
 .services-slider {
   display: flex;
-  width: 960;
+  width: 960px;
+}
+
+.services-slider-controls {
+  margin-top: 35px;
+}
+
+.services-slider-controls label {
+  display: inline-block;
+  width: 240px;
+  height: 60px;
+  padding: 15px 20px;
+
+  font-family: "Cuprum", "Verdana", sans-serif;
+  font-style: normal;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: none;
+
+  background-color: #32425c;
+}
+
+.services-slider-list {
+  width: 300%;
 }
 
 .services-slider-item {
-  display: flex;
+  float: right;
+  width: 800px;
 }
 
 .services-slider-item h3{
@@ -958,12 +984,17 @@ ul.popular-brands-wrapper {
 
 .slide-bio-delivery,
 .slide-bio-credit {
+  display: inline-block;
+  vertical-align: top;
   width: 280px;
 }
 
 .slide-bio-guarantee {
+  display: inline-block;
+  vertical-align: top;
   width: 380px;
 }
+
 
 .container .container-wrapper {
   display: flex;

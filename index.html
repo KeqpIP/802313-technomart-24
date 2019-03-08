@@ -231,12 +231,19 @@
       Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
     </p>
     <div class="services-slider">
-      <div class="services-slider-controls"></div>
+      <input class="visually-hidden" type="radio" id="srv-1" name="service" checked>
+      <input class="visually-hidden" type="radio" id="srv-2" name="service">
+      <input class="visually-hidden" type="radio" id="srv-3" name="service"> <!--name="toggle"-->
+      <div class="services-slider-controls">
+        <label for="srv-1">Доставка</label>
+        <label for="srv-2">Гарантия</label>
+        <label for="srv-3">Кредит</label>
+      </div>
       <ul class="services-slider-list">
-        <li class="services-slider-item slide">
-          <div>
+        <li class="services-slider-item slid">
+          <div class="slide-bio-delivery">
             <h3>Доставка</h3>
-            <p class="slide-bio-delivery">
+            <p>
             Мы с удовольствием доставим ваш товар прямо
             к вашему подъезду совершенно бесплатно! </br>
             Ведь мы неплохо заработаем, </br>
@@ -246,9 +253,9 @@
           <img src="img/slider-delivery.png" width="468" height="261">
         </li>
         <li class="services-slider-item slide">
-          <div>
+          <div class="slide-bio-guarantee">
             <h3>Гарантия</h3>
-            <p class="slide-bio-guarantee">
+            <p>
               Если купленный у нас товар поломается или заискрит, </br>
               а также в случае пожара, спровоцированного его возгаранием, </br>
               вы всегда можете быть уверены в нашей гарантии. Мы обменяем
@@ -259,9 +266,9 @@
           <img src="img/slider-guarantee.png" width="389" height="283">
         </li>
         <li class="services-slider-item slide">
-          <div>
+          <div class="slide-bio-credit">
             <h3>Кредит</h3>
-            <p class="slide-bio-credit">
+            <p>
               Залезть в долговую яму стало проще!
               Кредитные консультанты придут вам на помощь.
             </p>
