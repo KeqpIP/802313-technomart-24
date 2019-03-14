@@ -26,7 +26,7 @@ img{
   height: auto;
 }
 
-a { /*Можно ли оставить такое свойство для всех ссылок или лучше для каждого класса отдельно прописать?*/
+a {
   text-decoration: none;
 }
 
@@ -47,6 +47,7 @@ a { /*Можно ли оставить такое свойство для все
 }
 
 .user-navigation,
+.user-navigation-logout,
 .site-navigation,
 .transport-companies,
 .store-navigation,
@@ -105,7 +106,7 @@ background-color: #f4f7f9;
   width: 220px;
   height: 42px;
   padding-top: 13px;
-  padding-left: 45px;
+  padding-left: 55px;
 
   fill: #ffffff;
   box-shadow: 0px 5px #b52933;
@@ -126,9 +127,15 @@ background-color: #f4f7f9;
 .top-header .cart {
   position: relative;
   display: block;
-  max-width: 150px;
-  padding: 12px 40px;
+  width: 150px;
+  height: 42px;
+  line-height: 42px;
+  padding-left: 50px;
+  padding-right: 10px;
+}
 
+.top-header .filled {
+  background-color: #ee3643;
 }
 
 .top-header .bookmarks::before {
@@ -190,8 +197,7 @@ background-color: #f4f7f9;
 .top-header .order {
   width: 150px;
   min-height: 42px;
-  margin-right: 10px;
-  padding-top: 12px;
+  line-height: 42px;
   text-align: center;
 
   background-color: #63a63e;
@@ -207,87 +213,54 @@ background-color: #f4f7f9;
 }
 
 .search-form {
-  display: flex;
-}
-
-
-.button-search {
-  font-size: 0;
-  background-color: transparent;
-
-  border: 0;
-  width: 42px;
+  width: 270px;
   height: 42px;
+
   background-color: #293449;
-
-  cursor: pointer;
 }
+.search-form input[type="text"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 270px;
+  height: 42px;
+  margin: 0;
+  padding-left: 48px;
 
-.icon-search {
-  fill: #ffffff4d;
-}
+  font-size: 17px;
+  line-height: 18px;
 
-.icon-search:hover {
-  fill: #ffffff;
+  background-color: #293449;
+  background-image: url("../img/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 17px 12px;
+  border: none;
 }
-
-.icon-search:active {
-  fill: #ee3643;
+.search-form input::-webkit-input-placeholder {
+  font-weight: inherit;
+  font-family: "Cuprum",  "Verdana", sans-serif;
+  color: #ffffff;
 }
-
-.search {
-  flex-grow: 1;
-  min-height: 42px;
-  min-width: 270px;
-  border: 0px;
-  background-color: transparent;
+.search-form input:-ms-input-placeholder {
+  font-weight: inherit;
+  font-family: "Cuprum",  "Verdana", sans-serif;
+  color: #ffffff;
 }
-/*2) Как сделать синхронное поведение для наведения и фокуса кнопки+формы ввода? Кнопка не меняет свой цвет при наведении на input*/
-.search-form:hover,
-.button-search:hover {
+.search-form input::placeholder {
+  font-weight: inherit;
+  font-family: "Cuprum",  "Verdana", sans-serif;
+  color: #ffffff;
+}
+.search-form input:hover {
   background-color: #212a3a;
+  background-image: url("../img/icon-search-hover.svg");
+  outline: none;
 }
+.search-form input:active,
+.search-form input:focus {
+  color: #000000;
 
-.search:focus {
   background-color: #ffffff;
-}
-
-.search::-webkit-input-placeholder {
-  color:#ffffff;
-}
-.search::-moz-placeholder { /* Firefox 19+ */
-  color:#ffffff;
-}
-.search:-moz-placeholder { /* Firefox 18- */
-  color:#ffffff;
-}
-.search:-ms-input-placeholder {
-  color:#ffffff;
-}
-
-.search::-webkit-input-placeholder {
-  opacity: 1; transition: opacity 0.3s ease;
-}
-.search::-moz-placeholder {
-  opacity: 1; transition: opacity 0.3s ease;
-}
-.search:-moz-placeholder {
-  opacity: 1; transition: opacity 0.3s ease;
-}
-.search:-ms-input-placeholder {
-  opacity: 1; transition: opacity 0.3s ease;
-}
-.search:focus::-webkit-input-placeholder {
-  opacity: 0; transition: opacity 0.3s ease;
-}
-.search:focus::-moz-placeholder {
-  opacity: 0; transition: opacity 0.3s ease;
-}
-.search:focus:-moz-placeholder {
-  opacity: 0; transition: opacity 0.3s ease;
-}
-.search:focus:-ms-input-placeholder {
-  opacity: 0; transition: opacity 0.3s ease;
+  background-image: url("../img/icon-search-active.svg");
 }
 
 .top-header a:active {
@@ -302,7 +275,7 @@ background-color: #f4f7f9;
 
 .center-header .center-header-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   align-items: center;
 
@@ -310,37 +283,54 @@ background-color: #f4f7f9;
   padding-bottom: 60px;
 }
 
-/*Я не знаю как сделать перенос текста,
-как в макете без использования /br */
 .center-header h1 {
- width: 310px;
- padding-left: 55px;
+  margin-left: 50px;
+ width: 200px;
+}
+
+/*Не понимаю почему данный заголовок нельзя разбить br'ами*/
+.center-header p {
+  margin: 0;
+  padding: 0;
 }
 
 .center-header .contacts-mini {
+  margin-left: 60px;
   width: 270px;
   align-self: center;
   text-align: center;
 }
 
 .center-header-wrapper .user-navigation {
+  margin-left: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-self: flex-start;
   min-height: 45px;
-  width: 310px;
+  width: 340px;
 
-  margin: 5 auto;
+  margin-top: 5px auto;
   padding: 0;
 }
 
 .user-navigation .login-link {
-  padding: 14px 27px;
+  display: block;
+  margin-left: 40px;
+  width: 120px;
+  height: 45px;
+
 }
 
 .user-navigation .registration-link {
-  padding: 14px 25px;
+  display: block;
+  width: 150px;
+  height: 45px;
+  text-align: center
+}
+
+.user-navigation .registration {
+  margin-right: -20px;
 }
 
 h1 {
@@ -417,13 +407,14 @@ h1 {
 
 .user-navigation .login-link {
   padding-left: 45px;
+  margin-right: 10px;
 }
 
 .login-link::before {
   content: '';
 
   position: absolute;
-  top: 18px;
+  top: 14px;
   left: 13px;
 
   width: 24px;
@@ -459,6 +450,24 @@ a.user-link:active {
   color: rgb(0, 0, 0, 0.3);
 }
 
+a.user-link:focus .icon-user,
+a.user-link:hover .icon-user {
+  fill: #32425c;
+}
+
+a.user-link:active .icon-user {
+  fill:  rgb(0, 0, 0, 0.3);
+}
+
+.logout:focus path,
+.logout:hover path {
+  fill: #32425c;
+}
+
+.logout:active path {
+  fill:  rgb(0, 0, 0, 0.3);
+}
+
 a.my-orders:active,
 a.profile:active {
   color: rgb(50, 66, 92, 0.3);
@@ -471,12 +480,14 @@ ul.site-navigation {
 
 .site-navigation {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 45px;
+  width: 960px;
+
 }
 /*1) Как подвинуть меню навигации правее?*/
 .button-main {
-  margin: 0 -1px; /*2) При изменении масштаба появляются белые полосы между элементами.
-  С помощью марджинов я от них избавился. Не уверен правильно ли так делать*/
+  display: block;
   padding-top: 20px;
   padding-bottom: 20px;
   font-family: "Cuprum", "Verdana", sans-serif;
@@ -489,9 +500,10 @@ ul.site-navigation {
 
   background-color: #32425c;
   box-shadow: 0 5px #293449;
+
 }
 .site-navigation .main-page {
-  padding-left: 34px;
+  padding-left: 47px;
   padding-right: 34px;
 }
 
@@ -522,7 +534,7 @@ ul.site-navigation {
 
 .site-navigation .cont {
   padding-left: 33px;
-  padding-right: 33px;
+  padding-right: 47px;
 }
 
 .site-navigation a:hover,
@@ -538,6 +550,7 @@ ul.site-navigation {
   width: 960px;
   margin: 0 auto;
   padding: 0 10px;
+
 }
 
 .menu {
@@ -549,11 +562,27 @@ ul.site-navigation {
   margin-right: auto;
   padding: 0 10px;
 }
-/*Не понимаю почему между вертикальными элементами нет отступов. Их нужно делать маржинами?*/
+
 .container .menu {
   display: flex;
   justify-content: space-between;
   align-items: space-between;
+  flex-wrap: wrap;
+}
+
+.menu-wrapper-1 {
+  display: flex;
+  width: 620px;
+  justify-content: left;
+  align-items: space-between;
+  flex-wrap: wrap;
+}
+
+.menu-wrapper-2 {
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -568,15 +597,7 @@ ul.site-navigation {
   width: 300px;
   min-height: 123px;
   margin-top: 20px;
-}
-
-.menu-promotions {
-  order: 1;
-  align-self: flex-start;
-}
-.menu-delivery {
-  order: 2;
-
+  height: 123px;
 }
 
 .menu-bio {
@@ -740,6 +761,7 @@ ul.site-navigation {
 
 .menu-materials {
   background-color: #ffbf47;
+  margin-right: 20px;
 }
 
 .menu-materials::before {
@@ -868,6 +890,7 @@ ul.site-navigation {
   margin: 0 auto;
   padding: 0;
   background-color: #f9f5f0;
+  margin-top: 20px;
 }
 
 .popular-brands .popular {
@@ -908,31 +931,265 @@ ul.popular-brands-wrapper {
   line-height: 165px;
 }
 
+.brand:hover,
+.brand:focus {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.brand:active {
+  opacity: 0.3;
+}
+
 .brand a {
   display: block;
   text-align: center;
 }
-
-.services {
+.services-wrapper {
   margin-top: 65px;
+  padding-bottom: 100px;
+  background-color: #f4f7f9;
+}
+.services {
   margin-left: auto;
   margin-right: auto;
   padding-top: 68px;
   width: 960px;
-  background-color: #f4f7f9;
 }
 
 .services-bio {
   width: 400px;
 }
 
+.servises-slider {
+  display: flex;
+  width: 960px;
+  margin-top: 66px;
+}
+
+.servise-slider-controls {
+  position: relative;
+  flex-shrink: 0;
+  width: 240px;
+  margin: 0;
+  margin-right: 50px;
+  padding: 0;
+  list-style: none;
+  font-size: 21px;
+  line-height: 30px;
+}
+
+.servise-slider-controls::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: 0;
+  width: 10px;
+  height: 272px;
+  background-image: url("../img/vertical-shadow.png");
+  background-repeat: no-repeat;
+}
+
+.servise-slider-controls li {
+  width: 240px;
+  height: 61px;
+}
+
+.servise-slider-controls label {
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 15px;
+  padding-left: 23px;
+  font-size: 21px;
+  line-height: 30px;
+  background-color: #32425c;
+  cursor: pointer;
+  font-family: "Cuprum", "Verdana", sans-serif;
+  font-style: normal;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: none;
+}
+
+.servise-slider-controls li:first-child,
+.servise-slider-controls li:nth-of-type(2) {
+  border-bottom: 1px solid #4d637b;
+}
+
+.srv-1:checked ~ .servise-slider-controls label[for="srv-1"],
+.srv-2:checked ~ .servise-slider-controls label[for="srv-2"],
+.srv-3:checked ~ .servise-slider-controls label[for="srv-3"] {
+  color: #32425c;
+
+  background-color: #ffffff;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.servises-list h3,
+.servises-list li {
+  display: inline-block;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+
+  -ms-flex-negative: 0;
+}
+
+.servises-list {
+  display: flex;
+  width: 300%;
+  height: 283px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.servises-list li {
+  position: relative;
+  width: 650px;
+}
+
+.servises-list h3 {
+  padding-bottom: 26px;
+  padding-left: 30px;
+  line-height: 36px;
+  font-family: "Cuprum", "Verdana", sans-serif;
+  font-style: normal;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  color: #32425c;
+  text-transform: uppercase;
+}
+
+.servises-delivery {
+  width: 305px;
+  margin: 0;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  font-family: "PT Sans", "Verdana", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: none;
+}
+
+.servises-garantee {
+  width: 410px;
+  margin: 0;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  font-family: "PT Sans", "Verdana", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: none;
+}
+
+.servises-credit {
+  width: 310px;
+  margin: 0;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  font-family: "PT Sans", "Verdana", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: none;
+}
+
+.servises-credit .button {
+  margin-top: 30px;
+}
+
+.servises-list li:first-child::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  right: 1px;
+  z-index: -1;
+  width: 468px;
+  height: 261px;
+  background-image: url("../img/slider-delivery.png");
+  background-repeat: no-repeat;
+}
+.servises-list li:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: 2px;
+  z-index: -1;
+  width: 389px;
+  height: 283px;
+  background-image: url("../img/slider-guarantee.png");
+  background-repeat: no-repeat;
+}
+.servises-list li:last-child::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: 2px;
+  z-index: -1;
+  width: 465px;
+  height: 285px;
+  background-image: url("../img/slider-credit.png");
+  background-repeat: no-repeat;
+}
+.servises-slider input[type="radio"] {
+  display: none;
+}
+.credits {
+  display: block;
+  width: 195px;
+
+  text-align: center;
+}
+.srv-1:checked ~ .slider-container .servises-list {
+  -webkit-transform: translate(0);
+      -ms-transform: translate(0);
+          transform: translate(0);
+}
+.srv-2:checked ~ .slider-container .servises-list {
+  -webkit-transform: translate(-650px);
+      -ms-transform: translate(-650px);
+          transform: translate(-650px);
+}
+.srv-3:checked ~ .slider-container .servises-list {
+  -webkit-transform: translate(-1300px);
+      -ms-transform: translate(-1300px);
+          transform: translate(-1300px);
+}
+
+/*
 .services-slider {
   display: flex;
   width: 960px;
 }
 
 .services-slider-controls {
-  margin-top: 35px;
+  position: relative;
+  margin-top: 50px;
+}
+
+.servise-slider-controls::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: 0;
+
+  width: 10px;
+  height: 272px;
+
+  background-image: url("../img/vertical-shadow.png");
+  background-repeat: no-repeat;
 }
 
 .services-slider-controls label {
@@ -957,6 +1214,7 @@ ul.popular-brands-wrapper {
 }
 
 .services-slider-item {
+  position: relative;
   float: right;
   width: 800px;
 }
@@ -982,30 +1240,48 @@ ul.popular-brands-wrapper {
   text-transform: none;
 }
 
-.slide-bio-delivery,
-.slide-bio-credit {
-  display: inline-block;
-  vertical-align: top;
-  width: 280px;
+.slide-bio-delivery {
+  position: relative;
+  display: block;
+  width: 275px;
+}
+
+.services-slider-item img {
+  position: absolute;
+  top: 36px;
+  right: 170px;
 }
 
 .slide-bio-guarantee {
-  display: inline-block;
-  vertical-align: top;
-  width: 380px;
+  display: block;
+  width: 375px;
 }
 
+.slide-bio-credit {
+  display: block;
+  width: 280px;
+}
+
+.slide-bio-credit p {
+  margin-bottom: 30px;
+} */
 
 .container .container-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: space-between;
 
   padding-top: 85px;
 }
 
+.section-promo {
+  padding-right: 55px;
+}
+
+.section-contacts {
+  padding-left: 55px;
+}
+
 .company-promo-1 {
-  margin-right: 115px;
   width: 530px;
 }
 
@@ -1053,11 +1329,18 @@ min-height: 470px;
   color: #000000;
   text-transform: none;
 
-  background-color: #ffffff;
 }
 
 .button {
-  display: table-cell;
+  font-family: "Cuprum", "Verdana", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 38px;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  display: block;
   height: 38px;
   width: 220px;
   background-color: #ee3643;
@@ -1069,16 +1352,6 @@ min-height: 470px;
 
 .contacts .button {
   width: 300px;
-}
-
-.button a {
-  font-family: "Cuprum", "Verdana", sans-serif;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 38px;
-  font-weight: 400;
-  color: #ffffff;
-  text-transform: uppercase;
 }
 
 .button:hover,
@@ -1230,7 +1503,7 @@ a.order:active {
 }
 
 .footer-copyright {
-  width: 300px;
+  width: 230px;
 }
 
 .footer-social-wrapper {
@@ -1254,17 +1527,22 @@ a.order:active {
   align-items: center;
 }
 
-
-.social-button {
+a.social-button {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 5px;
   width: 42px;
   height: 42px;
+  background-color: #212a3a;
+  border-radius: 50%
 }
 
+a.social-button:focus,
+a.social-button:hover {
+  background-color: #ee3643;
+}
 
-/*Как создать круглый фон для этих иконок?*/
 .social-icon {
   fill: #ffffff;
 }
@@ -1284,8 +1562,6 @@ a.order:active {
 .bottom-footer a {
   text-transform: none;
   color: #ffd180;
-
-  background-color: #293449;
 }
 
 .bottom-footer a:hover,
@@ -1320,21 +1596,40 @@ a.order:active {
   background-color: #f2f6f8;
 }
 
-/*Между ссылками мои заказы и личный кабинет есть точка.
-Как её вставить? Через псевдоэлементы она будет реагировать на наведения
-Я предполагаю, что эта svg должна быть непосредственно в коде каталога?*/
+.my-orders {
+  margin-left: -15px;
+  margin-right: 15px;
+}
+
+.profile {
+  margin-left: 12px;
+}
 
 .user-area {
+  margin-left: 40px;
   position: relative;
-  min-width: 310px;
-  min-height: 45px;
+  display: flex;
+  width: 320px;
+  height: 45px;
   background-color: #ffffff;
   text-align: center;
+}
 
+.icon-user {
+  margin-left: 14px;
+  margin-right: 7px;
+  fill: #c5c5c5;
+}
+
+.icon-logout {
+  position: absolute;
+  top: 15px;
+  right: 10px;
 }
 
 .user-navigation .user-link {
-  display: inline-block;
+  display: block;
+  text-align: left;
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 21px;
@@ -1342,48 +1637,7 @@ a.order:active {
   font-weight: 400;
   color: #000000;
   text-transform: none;
-
-  background-color: #ffffff;
-  border: 3px solid #ffffff;
 }
-
-/* Вставлю эти картинки в html + добавлю ссылку для logout
-
-.user-link::before {
-  content: '';
-
-  position: absolute;
-  top: 15px;
-  left: 13px;
-
-  width: 24px;
-  height: 20px;
-
-  background-image: url("../img/icon-user.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-
-  opacity: 1;
-}
-
-.user-link::after {
-  content: '';
-
-  position: absolute;
-  top: 16px;
-  right: 10px;
-
-  width: 21px;
-  height: 19px;
-
-  background-image: url("../img/icon-logout.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-
-  opacity: 1;
-}
-
-*/
 
 .breadcrumb-wrapper {
   width: 960px;
@@ -1775,7 +2029,6 @@ ins::after {
   margin-left: -20px;
 }
 
-/*Как сделать, чтобы название переносилось также как на макете без /br ?*/
 .stock li {
   position: relative;
   display: flex;
@@ -1800,6 +2053,10 @@ ins::after {
   flex-direction: column;
   justify-content: space-between;
   align-items: center; */
+}
+
+.stock h4 {
+  width: 157px;
 }
 
 li .flag {
