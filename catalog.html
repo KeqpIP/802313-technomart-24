@@ -150,35 +150,49 @@
       <h3>Производители:</h3>
       <ul class="filters-company">
         <li>
-          <input type="checkbox" name="bosch" id="filter-bosch" tabindex="-1">
-          <label for="filter-bosch">Bosch</label>
+          <label for="filter-bosch" class="label-brand">Bosch
+          <input type="checkbox" class="visually-hidden" name="bosch" id="filter-bosch" tabindex="-1">
+          <span class="checkbox-indicator"></span>
+          </label>
        </li>
        <li>
-         <input type="checkbox" name="interskol" id="filter-interskol" tabindex="-1">
-         <label for="filter-interskol">Интерскол</label>
+          <label for="filter-interskol" class="label-brand">Интерскол
+          <input type="checkbox" class="visually-hidden" name="interskol" id="filter-interskol" tabindex="-1">
+          <span class="checkbox-indicator"></span>
+          </label>
        </li>
        <li>
-         <input type="checkbox" name="makita" id="filter-makita" tabindex="-1">
-         <label for="filter-makita">Makita</label>
+          <label for="filter-makita" class="label-brand">Makita
+          <input type="checkbox" class="visually-hidden" name="makita" id="filter-makita" tabindex="-1">
+          <span class="checkbox-indicator"></span>
+          </label>
        </li>
        <li>
-         <input type="checkbox" name="dewalt" id="filter-dewalt" tabindex="-1">
-         <label for="filter-dewalt">Dewalt</label>
+          <label for="filter-dewalt" class="label-brand">Dewalt
+          <input type="checkbox" class="visually-hidden" name="dewalt" id="filter-dewalt" tabindex="-1">
+          <span class="checkbox-indicator"></span>
+          </label>
        </li>
        <li>
-         <input type="checkbox" name="hitachi" id="filter-hitachi" tabindex="-1">
-         <label for="filter-hitachi">Hitachi</label>
+          <label for="filter-hitachi" class="label-brand">Hitachi
+          <input type="checkbox" class="visually-hidden" name="hitachi" id="filter-hitachi" tabindex="-1">
+          <span class="checkbox-indicator"></span>
+          </label>
        </li>
       </ul>
       <h3>Питание:</h3>
       <ul class="filters-type-power">
        <li>
-         <input type="radio" name="type-power" value="battery" id="filter-battery" tabindex="-1">
-         <label for="filter-battery">Аккумуляторные</label>
+          <label for="filter-battery" class="label-power">Аккумуляторные
+          <input type="radio" class="visually-hidden" name="type-power" value="battery" id="filter-battery" tabindex="-1">
+          <span class="radio-indicator"></span>
+          </label>
        </li>
        <li>
-         <input type="radio" name="type-power" value="cord" id="filter-cord" tabindex="-1">
-         <label for="filter-cord">Сетевые</label>
+          <label for="filter-cord" class="label-power">Сетевые
+          <input type="radio" class="visually-hidden" name="type-power" value="cord" id="filter-cord" tabindex="-1">
+          <span class="radio-indicator"></span>
+          </label>
        </li>
      </ul>
      <button type="submit" class="show">Показать</button>
@@ -340,6 +354,43 @@
   </div>
   </div>
   </section>
+  <div class="pagination-wrapper">
+  <ul class="pagination-list">
+    <li class="pagination-current">
+      <a>
+        1
+      </a>
+    </li>
+    <li class="pagination-item">
+      <a href="#">
+        2
+      </a>
+    </li>
+    <li class="pagination-item">
+      <a href="#">
+        3
+      </a>
+    </li>
+    <li class="pagination-next">
+      <a href="#">
+        Следующая
+      </a>
+    </li>
+  </ul>
+  </div>
+  <div class="article-wrapper">
+      <article class="perforators-description">
+        <h2>Пара слов о перфораторах</h2>
+        <p>
+          Перфоратор – универсальный строительный инструмент.
+          Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
+          Существуют электромеханические и пневматические перфораторы.
+          Современные модели могут выполнять функцию дрели, шуруповерта и отбойного молотка.
+          В ассортиментном ряду есть выбор &#171;трехрежимников&#187;:
+          в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+        </p>
+      </article>
+  </div>
 </main>
 
 <footer class="main-footer">
