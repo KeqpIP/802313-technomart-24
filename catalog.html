@@ -479,13 +479,19 @@
     </div>
 </footer>
 
-  <div class="modal added-product visually-hidden">
-      <button class="close">Закрыть</button>
-      <p>Товар добавлен в корзину!</p>
-      <div class="modal bottom-area">
-        <a class="order" href="order.html">Оформить заказ</a>
-        <button class="continue-shopping">Продолжить покупки</button>
-      </div>
+<div class="modal added-product visually-hidden">
+    <button class="close-order" id="close-button" aria-label="Закрыть окно">
+        <svg id="close-icon" class="close-icon" enable-background="new 0 0 21 21"
+        height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
+        <path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z" fill="#ee3643"/>
+        </svg>
+    </button>
+  <p class="good-added">Товар добавлен в корзину!</p>
+  <div class="bottom-area-order">
+    <a class="button modal-order" href="order.html">Оформить заказ</a>
+    <button class="continue-shopping">Продолжить покупки</button>
   </div>
+</div>
+<script src="js/buy.js"></script>
 </body>
 </html>

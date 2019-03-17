@@ -11,3 +11,12 @@
     evt.preventDefault();
     modalMap.classList.add("visually-hidden");
   });
+
+  window.addEventListener("keydown", function(evt) {
+    if (evt.keyCode === 27 ) {
+      if (modalMap.classList.contains("modal-map")) {
+        evt.preventDefault();
+        modalMap.classList.add("visually-hidden");
+      }
+    }
+  });

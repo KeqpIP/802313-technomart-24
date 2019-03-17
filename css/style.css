@@ -695,6 +695,7 @@ ul.site-navigation {
   top: 220px;
   left: 295px;
   display: inline-block;
+  vertical-align: top;
   width: 10px;
   height: 10px;
   margin-right: 5px;
@@ -713,6 +714,7 @@ ul.site-navigation {
   top: 110px;
   left: -10px;
   display: inline-block;
+  vertical-align: middle;
   width: 22px;
   height: 40px;
   margin-right: 100px;
@@ -727,6 +729,7 @@ ul.site-navigation {
   top: 110px;
   left: 415px;
   display: inline-block;
+  vertical-align: middle;
   width: 22px;
   height: 40px;
   margin-right: 100px;
@@ -1042,6 +1045,7 @@ ul.popular-brands-wrapper {
 .servises-list h3,
 .servises-list li {
   display: inline-block;
+  vertical-align: middle;
   flex-shrink: 0;
   margin: 0;
   padding: 0;
@@ -1177,104 +1181,6 @@ ul.popular-brands-wrapper {
           transform: translate(-1300px);
 }
 
-/*
-.services-slider {
-  display: flex;
-  width: 960px;
-}
-
-.services-slider-controls {
-  position: relative;
-  margin-top: 50px;
-}
-
-.servise-slider-controls::before {
-  content: "";
-  position: absolute;
-  top: -30px;
-  right: 0;
-
-  width: 10px;
-  height: 272px;
-
-  background-image: url("../img/vertical-shadow.png");
-  background-repeat: no-repeat;
-}
-
-.services-slider-controls label {
-  display: inline-block;
-  width: 240px;
-  height: 60px;
-  padding: 15px 20px;
-
-  font-family: "Cuprum", "Verdana", sans-serif;
-  font-style: normal;
-  font-size: 21px;
-  line-height: 30px;
-  font-weight: 700;
-  color: #ffffff;
-  text-transform: none;
-
-  background-color: #32425c;
-}
-
-.services-slider-list {
-  width: 300%;
-}
-
-.services-slider-item {
-  position: relative;
-  float: right;
-  width: 800px;
-}
-
-.services-slider-item h3{
-  font-family: "Cuprum", "Verdana", sans-serif;
-  font-style: normal;
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: 400;
-  color: #32425c;
-  text-transform: uppercase;
-}
-
-.services-slider-item p {
-  margin: 0;
-
-  font-family: "PT Sans", "Verdana", sans-serif;
-  font-size: 13px;
-  line-height: 24px;
-  font-weight: 400;
-  color: #000000;
-  text-transform: none;
-}
-
-.slide-bio-delivery {
-  position: relative;
-  display: block;
-  width: 275px;
-}
-
-.services-slider-item img {
-  position: absolute;
-  top: 36px;
-  right: 170px;
-}
-
-.slide-bio-guarantee {
-  display: block;
-  width: 375px;
-}
-
-.slide-bio-credit {
-  display: block;
-  width: 280px;
-}
-
-.slide-bio-credit p {
-  margin-bottom: 30px;
-} */
-
 .container .container-wrapper {
   display: flex;
   justify-content: space-between;
@@ -1354,7 +1260,6 @@ min-height: 470px;
   width: 220px;
   background-color: #ee3643;
   text-align: center;
-  vertical-align: middle;
 
   border-radius: 3px;
 }
@@ -1843,6 +1748,7 @@ p.name-section {
 
 .price-controls {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .price-controls span {
@@ -2092,7 +1998,7 @@ p.name-section {
   padding: 0;
 
   font-size: 13px;
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Verdana", sans-serif;
   color: #000000;
 }
 
@@ -2369,7 +2275,7 @@ a.product {
 .modal {
   position: fixed;
   background-color: #ffffff;
-  z-index: 15; /*Добавил этот z-index, чтобы карточки товара не перекрывали модалку*/
+  z-index: 20; /*Добавил этот z-index, чтобы карточки товара не перекрывали модалку*/
 }
 
 .feedback {
@@ -2387,17 +2293,29 @@ a.product {
 
 .modal-map {
   bottom: 300px;
-  left: 25%;
-  margin-left: 100px;
+  left: 12.5%;
+
   width: 972px;
   height: 476px;
   box-shadow: 0 20px 40px rgb(0, 0, 0, 0.75);
 }
 
-.close {
+.added-product {
+  bottom: 300px;
+  left: 26.5%;
+  width: 620px;
+  height: 282px;
+  box-shadow: 0 20px 40px rgb(0, 0, 0, 0.75);
+  border-top: 7px solid #ff5257;
+  z-index: 20;
+}
+
+.close,
+.close-map,
+.close-order {
   position: absolute;
   top: 9px;
-  right: 11px;
+  right: 17px;
   width: 21px;
   height: 21px;
   font-size: 0;
@@ -2416,7 +2334,9 @@ a.product {
   fill: #ca2c37;
 }
 
-.close:active {
+.close:active,
+.close-map:active,
+.close-order:active {
   outline: none;
 }
 
@@ -2447,11 +2367,9 @@ a.product {
 }
 
 .bottom-area {
-  background-color: #f4f4f4;
-  width: 620px;
   margin-top: 37px;
   margin-left: -80px;
-  height: 112px;
+
 }
 
 .feedback-form label {
@@ -2524,7 +2442,12 @@ button.feedback-button {
   cursor: pointer;
 }
 
-.added-product p {
+.added-product .good-added {
+  position: relative;
+  padding-top: 37px;
+  padding-bottom: 34px;
+  vertical-align: center;
+  text-align: center;
   font-family: "Cuprum", "Verdana", sans-serif;
   font-size: 30px;
   line-height: 30px;
@@ -2532,24 +2455,51 @@ button.feedback-button {
   color: #000000;
 }
 
-.order {
-  font-family: "Cuprum", "Verdana", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 400;
-  color: #ffffff;
-  text-transform: uppercase;
 
-  background-color: #ee3643;
+.bottom-area-order {
+  padding: 37px 0;
+  display: flex;
+  justify-content: center;
+  background-color: #f4f4f4;
+  width: 620px;
+  height: 112px;
+}
+
+.added-product .good-added::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 65px;
+  width: 66px;
+  height: 66px;
+  background-image: url("../img/good-added.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .continue-shopping {
+  margin-left: 20px;
+  border-style:none;
   font-family: "Cuprum", "Verdana", sans-serif;
+  font-style: normal;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 38px;
   font-weight: 400;
   color: #000000;
   text-transform: uppercase;
 
+  display: block;
+  height: 38px;
+  width: 220px;
   background-color: #ffffff;
+  text-align: center;
+
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/*В стайлгайде этого нет, но я добавил тень, чтобы был какой-нибудь визуальный отклик при наведении на кнопку*/
+.continue-shopping:hover,
+.continue-shopping:focus {
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
