@@ -2306,7 +2306,7 @@ a.product {
 
 .modal-map {
   bottom: 300px;
-  left: 12.5%;
+  left: 25%;
 
   width: 972px;
   height: 476px;
@@ -2315,7 +2315,7 @@ a.product {
 
 .added-product {
   bottom: 300px;
-  left: 26.5%;
+  left: 35%;
   width: 620px;
   height: 282px;
   box-shadow: 0 20px 40px rgb(0, 0, 0, 0.75);
