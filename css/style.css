@@ -49,6 +49,7 @@ a {
 .user-navigation,
 .user-navigation-logout,
 .site-navigation,
+.site-navigation-main,
 .transport-companies,
 .store-navigation,
 .footer-social,
@@ -290,7 +291,7 @@ background-color: #f4f7f9;
   align-items: center;
 
   padding-top: 35px;
-  padding-bottom: 39px;
+  padding-bottom: 36px;
 }
 
 .center-header h1 {
@@ -487,17 +488,23 @@ a.profile:active {
 }
 
 ul.site-navigation {
-  margin: 33px auto;
+  margin-top: 28px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 35px;
   padding: 0;
-
 }
 
-.site-navigation {
+ul.site-navigation-main {
+  margin: 33px auto;
+  padding: 0;
+}
+
+.site-navigation,
+.site-navigation-main {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 45px;
   width: 960px;
-
 }
 
 .button-main {
@@ -517,47 +524,57 @@ ul.site-navigation {
 
 }
 
-.site-navigation .main-page {
-  padding-left: 47px;
+.site-navigation .main-page,
+.site-navigation-main .main-page {
+  padding-left: 52px;
   padding-right: 34px;
 }
 
-.site-navigation .company {
-  padding-left: 34px;
-  padding-right: 30px;
-}
-
-.site-navigation .catalog {
+.site-navigation .company,
+.site-navigation-main .company {
   padding-left: 30px;
   padding-right: 30px;
 }
 
-.site-navigation .news {
+.site-navigation .catalog,
+.site-navigation-main .catalog {
   padding-left: 30px;
   padding-right: 30px;
 }
 
-.site-navigation .special {
+.site-navigation .news,
+.site-navigation-main .news {
   padding-left: 30px;
-  padding-right: 31px;
+  padding-right: 30px;
 }
 
-.site-navigation .delivery {
+.site-navigation .special,
+.site-navigation-main .special {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.site-navigation .delivery,
+.site-navigation-main .delivery {
   padding-left: 31px;
   padding-right: 32px;
 }
 
-.site-navigation .cont {
-  padding-left: 33px;
-  padding-right: 47px;
+.site-navigation .cont,
+.site-navigation-main .cont {
+  padding-left: 30px;
+  padding-right: 53px;
 }
 
 .site-navigation a:hover,
-.site-navigation a:focus {
+.site-navigation a:focus,
+.site-navigation-main a:hover,
+.site-navigation-main a:focus  {
   background-color: #293449;
 }
 
-.site-navigation a:active {
+.site-navigation a:active,
+.site-navigation-main a:active {
   color: rgb(255, 255, 255, 0.5)
 }
 
@@ -575,7 +592,7 @@ ul.site-navigation {
   width: 960px;
   min-height: 410px;
   margin-top: 32px;
-  margin-bottom: 55px;
+  margin-bottom: 60px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 10px;
@@ -887,13 +904,13 @@ ul.site-navigation {
 }
 
 .popular-main .popular {
-  padding-top: 3px;
+  padding-top: 0px;
   margin-left: 28px;
   background-color: #f9f5f0;
 }
 
 .popular-main .button {
-  margin-top: 23px;
+  margin-top: 20px;
   margin-right: 25px;
   width: 253px;
 }
@@ -954,7 +971,7 @@ ul.popular-brands-wrapper {
   width: 220px;
   height: 145px;
   border: 1px solid #ebebeb;
-  line-height: 165px;
+  line-height: 175px;
 }
 
 .brand:nth-child(4n+1) {
@@ -1244,7 +1261,7 @@ min-height: 470px;
 
 .map-link img {
   margin-top: 30px;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 }
 
 .container h2 {
@@ -1262,7 +1279,7 @@ min-height: 470px;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100px;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
@@ -1281,7 +1298,7 @@ li.transport-company {
 li.transport-company::before {
   content: "";
   position: absolute;
-  top: 10px;
+  top: 11px;
   left: -35px;
   width: 25px;
   height: 2px;
@@ -1468,7 +1485,7 @@ a.order:active {
 
 .footer-social-wrapper {
   width: 160px;
-  margin: 0 100px;
+  margin: 0 50px;
 }
 
 .feedback-developed-wrapper {
@@ -1491,7 +1508,7 @@ a.social-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 5px;
+  margin-left: 2px;
   width: 42px;
   height: 42px;
   background-color: #212a3a;
@@ -2073,7 +2090,6 @@ p.name-section {
 }
 
 del {
-  padding-top: 5px;
   font:inherit;
   font-size: 17px;
   line-height: 18px;
@@ -2085,7 +2101,7 @@ ins {
   width:140px;
   min-height: 38px;
   padding-top: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   margin-top: 8px;
   margin-left: 4px;
 
@@ -2105,7 +2121,7 @@ ins::after {
   content: "";
 
   position: absolute;
-  bottom: 15px;
+  bottom: 20px;
   right:  16px;
 
   width: 0;
@@ -2188,8 +2204,8 @@ ins::after {
 
 li .flag {
   position: absolute;
-  top: -1px;
-  right: -1px;
+  top: 0px;
+  right: 0px;
 
   width: 60px;
   height: 60px;
