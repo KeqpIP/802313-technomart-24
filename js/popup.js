@@ -1,11 +1,13 @@
   var link = document.querySelector(".feedback-link");
   var popup = document.querySelector(".feedback");
   var close = document.querySelector(".close");
+  var popupName = popup.querySelector("[id=form-name]")
 
 
   link.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.remove("visually-hidden");
+    popupName.focus();
   });
 
   close.addEventListener("click", function (evt) {

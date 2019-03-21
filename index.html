@@ -6,7 +6,7 @@
   <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -35,7 +35,7 @@
   </div>
   <div class="center-header">
     <div class="center-header-wrapper">
-        <h1>Интернет-магазин строительных материалов <p>и инструментов для ремонта</p></h1>
+        <h1>Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта</h1>
       <div class="contacts-mini">
         <div class="phone">
           <a href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -64,11 +64,11 @@
 <div class="menu-wrapper-1">
   <div class="menu-materials">
     <span class="menu-bio">Материалы</span>
-    <a class="menu-button" href=>На любой вкус</a>
+    <a class="menu-button" href="#">На любой вкус</a>
   </div>
   <div class="menu-tools">
     <span class="menu-bio">Инструмент</span>
-    <a class="menu-button" href=>На все случаи</a>
+    <a class="menu-button" href="#">На все случаи</a>
   </div>
   <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
   <input class="visually-hidden" type="radio" id="product-2" name="toggle">
@@ -96,15 +96,15 @@
 <div class="menu-wrapper-2">
   <div class="menu-technics">
       <span class="menu-bio">Техника</span>
-      <a class="menu-button" href=>Для стройки</a>
+      <a class="menu-button" href="#">Для стройки</a>
   </div>
   <div class="menu-promotions">
     <span class="menu-bio">Скидки 50%</span>
-    <a class="menu-button" href=>На 350 товаров</a>
+    <a class="menu-button" href="#">На 350 товаров</a>
   </div>
   <div class="menu-delivery">
     <span class="menu-bio">Доставка</span>
-    <a class="menu-button" href=>Бесплатно</a>
+    <a class="menu-button" href="#">Бесплатно</a>
   </div>
 </div>
 </div>
@@ -115,10 +115,10 @@
   <div class="popular-items">
     <div class="stock-popular-wrapper">
         <ul class="stock-popular">
-            <li>
+            <li tabindex="0">
                 <div class="actions">
-                  <button class="buy">Купить</button>
-                  <button class="add-bookmarks">В закладки</button>
+                  <button class="buy" tabindex="0">Купить</button>
+                  <button class="add-bookmarks" tabindex="0">В закладки</button>
                 </div>
                 <img src="img/bfg9000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
                 <a class="product" href="bfg9000.html">
@@ -127,10 +127,10 @@
                 <del>32500 Р.</del>
                 <ins>25500 Р.</ins>
               </li>
-          <li>
+          <li tabindex="0">
             <div class="actions">
-              <button class="buy">Купить</button>
-              <button class="add-bookmarks">В закладки</button>
+              <button class="buy" tabindex="0">Купить</button>
+              <button class="add-bookmarks" tabindex="0">В закладки</button>
             </div>
             <img src="img/bfg3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
             <a class="product" href="bfg3000.html">
@@ -139,10 +139,10 @@
             <del>22500 Р.</del>
             <ins>15500 Р.</ins>
           </li>
-          <li>
+          <li tabindex="0">
             <div class="actions">
-              <button class="buy">Купить</button>
-              <button class="add-bookmarks">В закладки</button>
+              <button class="buy" tabindex="0">Купить</button>
+              <button class="add-bookmarks" tabindex="0">В закладки</button>
             </div>
             <img src="img/bfg6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
             <a class="product" href="bfg6000.html">
@@ -151,11 +151,11 @@
             <del>30500 Р.</del>
             <ins>25500 Р.</ins>
           </li>
-          <li>
+          <li tabindex="0">
             <div class="flag flag-new">новинка</div>
             <div class="actions">
-                <button class="buy">Купить</button>
-                <button class="add-bookmarks">В закладки</button>
+                <button class="buy" tabindex="0">Купить</button>
+                <button class="add-bookmarks" tabindex="0">В закладки</button>
             </div>
             <img src="img/bfg2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
             <a class="product" href="bfg2000.html">
@@ -221,9 +221,9 @@
       Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
     </p>
     <div class="servises-slider">
-        <input type="radio" id="srv-1" name="servises-button" class="srv-1" checked>
-        <input type="radio" id="srv-2" name="servises-button" class="srv-2">
-        <input type="radio" id="srv-3" name="servises-button" class="srv-3">
+        <input type="radio" id="srv-1" name="servises-button" class="srv-1" tabindex="0" checked>
+        <input type="radio" id="srv-2" name="servises-button" class="srv-2" tabindex="0">
+        <input type="radio" id="srv-3" name="servises-button" class="srv-3" tabindex="0">
         <ul class="servise-slider-controls">
           <li>
             <label for="srv-1">
@@ -349,7 +349,6 @@
     Все права защищены
     </p>
     <ul class="footer-social">
-      <div class="footer-social-wrapper">
         <li>
           <a class="social-button" href="#">
           <span class="visually-hidden">Вконтакте</span>
@@ -377,7 +376,6 @@
           </svg>
           </a>
         </li>
-      </div>
     </ul>
     <div class="feedback-developed-wrapper">
       <p class="footer-feedback">
@@ -394,8 +392,8 @@
 </footer>
 
 <div class="modal feedback visually-hidden">
-  <button class="close" id="close-button" aria-label="Закрыть окно">
-    <svg id="close-icon" class="close-icon" enable-background="new 0 0 21 21"
+  <button class="close" id="close-button-feedback" aria-label="Закрыть окно">
+    <svg id="close-icon-feedback" class="close-icon" enable-background="new 0 0 21 21"
     height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
     <path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z" fill="#ee3643"/>
     </svg>
@@ -424,18 +422,18 @@
 </div>
 
 <div class="modal modal-map visually-hidden">
-    <button class="close-map" id="close-button" aria-label="Закрыть окно">
-        <svg id="close-icon" class="close-icon" enable-background="new 0 0 21 21"
+    <button class="close-map" id="close-button-map" aria-label="Закрыть окно">
+        <svg id="close-icon-map" class="close-icon" enable-background="new 0 0 21 21"
         height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
         <path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z" fill="#ee3643"/>
         </svg>
       </button>
-      <iframe src="https://yandex.ru/map-widget/v1/-/CCe7BV3E" width="970" height="476" frameborder="1" allowfullscreen="true"></iframe>
+      <iframe src="https://yandex.ru/map-widget/v1/-/CCe7BV3E" width="970" height="476"></iframe>
 </div>
 
 <div class="modal added-product visually-hidden">
-    <button class="close-order" id="close-button" aria-label="Закрыть окно">
-        <svg id="close-icon" class="close-icon" enable-background="new 0 0 21 21"
+    <button class="close-order" id="close-button-buy" aria-label="Закрыть окно">
+        <svg id="close-icon-buy" class="close-icon" enable-background="new 0 0 21 21"
         height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
         <path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z" fill="#ee3643"/>
         </svg>
@@ -447,8 +445,8 @@
   </div>
 </div>
 
-<script src="js/popup.js"></script>
-<script src="js/map.js"></script>
-<script src="js/buy.js"></script>
+<script src="js/popup.min.js"></script>
+<script src="js/map.min.js"></script>
+<script src="js/buy.min.js"></script>
 </body>
 </html>
