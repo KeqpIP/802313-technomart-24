@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -36,9 +36,7 @@
       <div class="center-header-wrapper">
         <h1>Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта</h1>
         <div class="contacts-mini">
-          <div class="phone">
-            <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-          </div>
+          <a class="phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div>
         <ul class="user-navigation">
@@ -46,13 +44,13 @@
           <li class="registration"><a class="registration-link" href="registration.html">Регистрация</a></li>
         </ul>
         <ul class="site-navigation-main">
-          <li><a class="button-main main-page">Главная</a></li>
-          <li><a class="button-main company" href="company.html">Компания</a></li>
-          <li><a class="button-main catalog" href="catalog.html">Каталог</a></li>
-          <li><a class="button-main news" href="news.html">Новости</a></li>
-          <li><a class="button-main special" href="special.html">Спецпредложения</a></li>
-          <li><a class="button-main delivery" href="delivery.html">Доставка</a></li>
-          <li><a class="button-main cont" href="contacts.html">Контакты</a></li>
+          <li class="navigation-element"><a class="button-main main-page">Главная</a></li>
+          <li class="navigation-element"><a class="button-main company" href="company.html">Компания</a></li>
+          <li class="navigation-element"><a class="button-main catalog" href="catalog.html">Каталог</a></li>
+          <li class="navigation-element"><a class="button-main news" href="news.html">Новости</a></li>
+          <li class="navigation-element"><a class="button-main special" href="special.html">Спецпредложения</a></li>
+          <li class="navigation-element"><a class="button-main delivery" href="delivery.html">Доставка</a></li>
+          <li class="navigation-element"><a class="button-main cont" href="contacts.html">Контакты</a></li>
         </ul>
       </div>
     </div>
@@ -73,10 +71,10 @@
         <input class="visually-hidden" type="radio" id="product-2" name="toggle">
         <div class="menu-slider">
           <div class="slider-controls">
-            <label class="radio-label" for="product-1">Первый</label>
-            <label class="radio-label" for="product-2">Второй</label>
-            <label class="arrow-label-left" for="product-1">Первый</label>
-            <label class="arrow-label-right" for="product-2">Второй</label>
+            <label class="radio-label" for="product-1" tabindex="0">Первый</label>
+            <label class="radio-label" for="product-2" tabindex="0">Второй</label>
+            <label class="arrow-label-left" for="product-1" tabindex="0">Первый</label>
+            <label class="arrow-label-right" for="product-2" tabindex="0">Второй</label>
           </div>
           <ul class="menu-slider-list">
             <li class="menu-slider-item slide" id="menu-slide1">
@@ -114,54 +112,54 @@
     <div class="popular-items">
       <div class="stock-popular-wrapper">
         <ul class="stock-popular">
-          <li tabindex="0">
+          <li class="stock-card" tabindex="0">
             <div class="actions">
-              <button class="buy" tabindex="0">Купить</button>
-              <button class="add-bookmarks" tabindex="0">В закладки</button>
+              <a class="buy" href="buy.html" tabindex="0">Купить</a>
+              <a class="add-bookmarks" href="add-bookmarks.html" tabindex="0">В закладки</a>
             </div>
             <img src="img/bfg9000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
             <a class="product" href="bfg9000.html">
               <h4>Перфоратор BOSCH BFG 9000</h4>
             </a>
-            <del>32500 Р.</del>
-            <ins>25500 Р.</ins>
+            <del class="old-cost">32500 Р.</del>
+            <ins class="new-cost">25500 Р.</ins>
           </li>
-          <li tabindex="0">
+          <li class="stock-card" tabindex="0">
             <div class="actions">
-              <button class="buy" tabindex="0">Купить</button>
-              <button class="add-bookmarks" tabindex="0">В закладки</button>
+              <a class="buy" href="buy.html" tabindex="0">Купить</a>
+              <a class="add-bookmarks" href="add-bookmarks.html" tabindex="0">В закладки</a>
             </div>
             <img src="img/bfg3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
             <a class="product" href="bfg3000.html">
               <h4>Перфоратор BOSCH BFG 3000</h4>
             </a>
-            <del>22500 Р.</del>
-            <ins>15500 Р.</ins>
+            <del class="old-cost">22500 Р.</del>
+            <ins class="new-cost">15500 Р.</ins>
           </li>
-          <li tabindex="0">
+          <li class="stock-card" tabindex="0">
             <div class="actions">
-              <button class="buy" tabindex="0">Купить</button>
-              <button class="add-bookmarks" tabindex="0">В закладки</button>
+              <a class="buy" href="buy.html" tabindex="0">Купить</a>
+              <a class="add-bookmarks" href="add-bookmarks.html" tabindex="0">В закладки</a>
             </div>
             <img src="img/bfg6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
             <a class="product" href="bfg6000.html">
               <h4>Перфоратор BOSCH BFG 6000</h4>
             </a>
-            <del>30500 Р.</del>
-            <ins>25500 Р.</ins>
+            <del class="old-cost">30500 Р.</del>
+            <ins class="new-cost">25500 Р.</ins>
           </li>
-          <li tabindex="0">
+          <li class="stock-card" tabindex="0">
             <div class="flag flag-new">новинка</div>
             <div class="actions">
-              <button class="buy" tabindex="0">Купить</button>
-              <button class="add-bookmarks" tabindex="0">В закладки</button>
+              <a class="buy" href="buy.html" tabindex="0">Купить</a>
+              <a class="add-bookmarks" href="add-bookmarks.html" tabindex="0">В закладки</a>
             </div>
             <img src="img/bfg2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
             <a class="product" href="bfg2000.html">
               <h4>Перфоратор BOSCH BFG 2000</h4>
             </a>
-            <del></del>
-            <ins>12500 Р.</ins>
+            <del class="old-cost"></del>
+            <ins class="new-cost">12500 Р.</ins>
           </li>
         </ul>
       </div>
@@ -225,17 +223,17 @@
           <input type="radio" id="srv-3" name="servises-button" class="srv-3" tabindex="0">
           <ul class="servise-slider-controls">
             <li>
-              <label for="srv-1">
+              <label for="srv-1" tabindex="0">
                 Доставка
               </label>
             </li>
             <li>
-              <label for="srv-2">
+              <label for="srv-2" tabindex="0">
                 Гарантия
               </label>
             </li>
             <li>
-              <label for="srv-3">
+              <label for="srv-3" tabindex="0">
                 Кредит
               </label>
             </li>

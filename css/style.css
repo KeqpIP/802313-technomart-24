@@ -144,7 +144,7 @@ a {
 }
 
 .top-header .bookmarks::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 12px;
   left: 17px;
@@ -157,7 +157,7 @@ a {
 }
 
 .top-header .cart::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 12px;
   left: 17px;
@@ -266,7 +266,7 @@ a {
 .center-header-wrapper {
   width: 960px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0;
 }
 
 .center-header .center-header-wrapper {
@@ -275,16 +275,18 @@ a {
   flex-wrap: wrap;
   align-items: center;
   padding-top: 35px;
-  padding-bottom: 36px;
+  padding-bottom: 30px;
+  margin-bottom: 5px;
 }
 
 .center-header h1 {
-  margin-left: 50px;
+  margin-top: 15px;
+  margin-left: 62px;
   width: 200px;
 }
 
 .center-header .contacts-mini {
-  margin-left: 60px;
+  margin-left: 68px;
   width: 270px;
   align-self: center;
   text-align: center;
@@ -316,7 +318,7 @@ a {
 
 .user-navigation .login-link {
   display: block;
-  margin-left: 40px;
+  margin-left: 20px;
   width: 120px;
   height: 45px;
 }
@@ -343,7 +345,8 @@ h1 {
 }
 
 .contacts-mini address {
-  padding-left: 17px;
+  padding-left: 0;
+  padding-top: 5px;
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 14px;
@@ -354,7 +357,8 @@ h1 {
   background-color: #f4f7f9;
 }
 
-.phone a {
+.phone {
+  display: block;
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 21px;
@@ -366,7 +370,9 @@ h1 {
 }
 
 .contacts-mini .phone {
-  padding-left: 40px;
+  width: 270px;
+  height: 45px;
+  padding-left: 23px;
   position: relative;
   text-align: center;
   background-color: #f4f7f9;
@@ -374,10 +380,10 @@ h1 {
 }
 
 .contacts-mini .phone::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 13px;
-  left: 15px;
+  top: 10px;
+  left: 11px;
   width: 19px;
   height: 19px;
   background-image: url("../img/icon-phone.svg");
@@ -400,12 +406,12 @@ h1 {
 }
 
 .user-navigation .login-link {
-  padding-left: 45px;
+  padding-left: 46px;
   margin-right: 10px;
 }
 
 .login-link::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 14px;
   left: 13px;
@@ -428,7 +434,6 @@ a.profile:focus {
   color: #ee3643;
 }
 
-/*Тоже не работает заливка для svg*/
 a.login-link:hover::before path,
 a.registration-link:hover::before path {
   fill: #212a3a;
@@ -463,29 +468,39 @@ a.profile:active {
   color: rgb(50, 66, 92, 0.3);
 }
 
-ul.site-navigation {
-  margin-top: 28px;
+.site-navigation {
+  margin-top: 25px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 35px;
+  margin-bottom: 36px;
   padding: 0;
 }
 
-ul.site-navigation-main {
-  margin: 33px auto;
+.site-navigation-main {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
   padding: 0;
 }
 
 .site-navigation,
 .site-navigation-main {
   display: flex;
+  justify-content: left;
   flex-wrap: wrap;
-  width: 960px;
+  width: 940px;
+}
+
+.site-navigation .navigation-element,
+.site-navigation-main .navigation-element {
+ flex-grow: 1;
 }
 
 .button-main {
   display: block;
-  padding-top: 20px;
+  text-align: center;
+  padding-top: 18px;
   padding-bottom: 20px;
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
@@ -554,7 +569,7 @@ ul.site-navigation-main {
 
 .container-wrapper {
   width: 960px;
-  margin-top: 0;
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: -10px;
@@ -602,14 +617,13 @@ ul.site-navigation-main {
   position: relative;
   display: flex;
   flex-flow: column;
-  width: 300px;
+  min-width: 300px;
   min-height: 123px;
   margin-top: 20px;
-  height: 123px;
 }
 
 .menu-bio {
-  margin-top: 23px;
+  margin-top: 21px;
   margin-left: 23px;
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
@@ -623,16 +637,17 @@ ul.site-navigation-main {
 .menu-button {
   display: block;
   width: 135px;
-  min-height: 38px;
-  margin-top: 10px;
-  margin-left: 23px;
-  padding: 12px 12px;
+  height: 38px;
+  margin-top: 13px;
+  margin-left: 24px;
+  padding-left: auto;
+  padding-right: auto;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 38px;
   font-weight: 400;
   color: #ffffff;
   text-transform: uppercase;
@@ -658,11 +673,9 @@ ul.site-navigation-main {
 }
 
 .slide h3 {
-  margin: 0;
-  padding-top: 0;
-  position: relative;
-  top: -30px;
-  left: -15px;
+  margin-top: -30px;
+  margin-left: -15px;
+  padding: 0;
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 36px;
@@ -673,11 +686,9 @@ ul.site-navigation-main {
 }
 
 .slide p {
-  margin: 0;
+  margin-top: -33px;
+  margin-left: -15px;
   padding: 0;
-  position: relative;
-  top: -28px;
-  left: -15px;
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 18px;
@@ -690,9 +701,8 @@ ul.site-navigation-main {
 .slide .button {
   width: 195px;
   height: 38px;
-  position: relative;
-  bottom: -94px;
-  left: -14px;
+  margin-top: 121px;
+  margin-left: -15px;
 }
 
 .slider-controls .radio-label {
@@ -770,7 +780,7 @@ ul.site-navigation-main {
 }
 
 .menu-materials::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 30px;
   left: 213px;
@@ -786,7 +796,7 @@ ul.site-navigation-main {
 }
 
 .menu-tools::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 33px;
   left: 197px;
@@ -802,7 +812,7 @@ ul.site-navigation-main {
 }
 
 .menu-technics::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 31px;
   left: 190px;
@@ -818,7 +828,7 @@ ul.site-navigation-main {
 }
 
 .menu-promotions::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 27px;
   left: 196px;
@@ -834,7 +844,7 @@ ul.site-navigation-main {
 }
 
 .menu-delivery::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 32px;
   left: 191px;
@@ -856,6 +866,7 @@ ul.site-navigation-main {
 }
 
 .popular-main .popular {
+  width: 265px;
   padding-top: 0px;
   margin-left: 28px;
   background-color: #f9f5f0;
@@ -886,6 +897,7 @@ ul.site-navigation-main {
 }
 
 .popular-brands .popular {
+  width: 380px;
   margin-left: 20px;
   padding-top: 10px;
   padding-left: 7px;
@@ -949,16 +961,15 @@ ul.popular-brands-wrapper {
 }
 
 .services-wrapper {
-  margin-top: 55px;
-  padding-bottom: 30px;
+  margin-top: 70px;
   background-color: #f4f7f9;
 }
 
 .services {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 56px;
-  padding-left: 13px;
+  padding-top: 41px;
+  padding-left: 10px;
   width: 960px;
 }
 
@@ -998,14 +1009,14 @@ ul.popular-brands-wrapper {
 
 .servise-slider-controls li {
   width: 240px;
-  height: 61px;
+  height: 62px;
 }
 
 .servise-slider-controls label {
   display: block;
-  padding-top: 16px;
-  padding-bottom: 15px;
-  padding-left: 19px;
+  padding-top: 15px;
+  padding-bottom: 16px;
+  padding-left: 23px;
   font-size: 21px;
   line-height: 30px;
   background-color: #32425c;
@@ -1015,6 +1026,11 @@ ul.popular-brands-wrapper {
   font-weight: 700;
   color: #ffffff;
   text-transform: none;
+}
+
+.servise-slider-controls label:hover,
+.servise-slider-controls label:focus {
+  background-color: #293449;
 }
 
 .servise-slider-controls li:first-child,
@@ -1058,7 +1074,7 @@ ul.popular-brands-wrapper {
 
 .servises-list h3 {
   padding-bottom: 26px;
-  padding-left: 25px;
+  padding-left: 26px;
   line-height: 36px;
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
@@ -1072,7 +1088,7 @@ ul.popular-brands-wrapper {
 .servises-delivery {
   width: 305px;
   margin-top: 0;
-  margin-left: -5px;
+  margin-left: -1px;
   padding-bottom: 30px;
   padding-left: 27px;
   font-family: "PT Sans", "Verdana", sans-serif;
@@ -1193,7 +1209,7 @@ ul.popular-brands-wrapper {
 }
 
 .company-promo-1 {
-  padding-top: 5px;
+  padding-top: 4px;
   width: 530px;
 }
 
@@ -1215,6 +1231,10 @@ ul.popular-brands-wrapper {
 .map-link img {
   margin-top: 18px;
   margin-bottom: 32px;
+}
+
+.feedback-link {
+  padding-left: 5px;
 }
 
 .container h2 {
@@ -1242,12 +1262,12 @@ ul.popular-brands-wrapper {
   text-transform: none;
 }
 
-li.transport-company {
+.transport-company {
   position: relative;
-  margin-left: -5px;
+  margin-left: -3px;
 }
 
-li.transport-company::before {
+.transport-company::before {
   content: "";
   position: absolute;
   top: 11px;
@@ -1382,6 +1402,7 @@ a.order:active {
 }
 
 .footer-contacts {
+  min-height: auto;
   padding-bottom: 50px;
   margin-top: 33px;
   margin-left: 2px;
@@ -1505,6 +1526,8 @@ a.social-button:hover {
 
 .my-orders,
 .profile {
+  display: block;
+  margin-top: 7px;
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
   font-size: 16px;
@@ -1517,11 +1540,13 @@ a.social-button:hover {
 }
 
 .my-orders {
-  margin-left: -15px;
+  margin-left: -31px;
   margin-right: 15px;
 }
 
 .point {
+  display: block;
+  margin-top: 5px;
   color: #32425c;
 }
 
@@ -1530,10 +1555,10 @@ a.social-button:hover {
 }
 
 .user-area {
-  margin-left: 40px;
+  margin-left: 20px;
   position: relative;
   display: flex;
-  width: 320px;
+  width: 300px;
   height: 45px;
   background-color: #ffffff;
   text-align: center;
@@ -1580,7 +1605,7 @@ a.social-button:hover {
 }
 
 .breadcrumb li::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 5px;
   right: 15px;
@@ -1605,6 +1630,10 @@ a.social-button:hover {
   color: #000000;
   text-transform: uppercase;
   background-color: #ffffff;
+}
+
+.perf {
+  margin-left: 2px;
 }
 
 .store-selection h2 {
@@ -1654,12 +1683,16 @@ a.social-button:hover {
 }
 
 .sort-wrapper {
-  margin-top: 4px;
+  margin-top: 2px;
   margin-left: 10px;
+  padding: 7px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .name-section {
-  padding-left: 18px;
+  padding-left: 20px;
 }
 
 .sort-wrapper,
@@ -1673,13 +1706,6 @@ p.name-section {
   margin-bottom: 0px;
   width: 220px;
   padding-right: 20px;
-}
-
-.sort-wrapper {
-  padding: 7px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .cost-filter {
@@ -1777,7 +1803,8 @@ p.name-section {
 .sorting {
   width: 560px;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: left;
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -1785,16 +1812,18 @@ p.name-section {
 .type {
   margin: 0 auto;
   padding-top: 0;
-  padding-left: 5px;
+  padding-left: 15px;
   width: 480px;
-  justify-content: space-around;
+  justify-content: left;
 }
 
 .value {
   margin: 0 auto;
-  padding: 0;
+  padding-top: 2px;
+  padding-left: 19px;
+  padding-right: 17px;
   width: 85px;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .name-section,
@@ -1806,6 +1835,15 @@ p.name-section {
   color: #000000;
   text-transform: uppercase;
   background-color: #f7f3ec;
+}
+
+.type-cost {
+  margin-left: 27px;
+}
+
+.type-style {
+  margin-left: 70px;
+  margin-right: 65px;
 }
 
 .show {
@@ -1828,9 +1866,7 @@ p.name-section {
 }
 
 .sort-type {
-  text-decoration-line: underline;
-  text-decoration-style: dotted;
-  text-decoration-color: #ee3643;
+  border-bottom: 1px dotted #ee3643;
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -1999,8 +2035,9 @@ p.name-section {
 
 .article-wrapper {
   width: 100%;
-  height: 268px;
+  min-height: 268px;
   background-color: #f2f6f8;
+  margin-bottom: -7px;
 }
 
 .perforators-description {
@@ -2012,7 +2049,7 @@ p.name-section {
 
 .perforators-description h2 {
   margin: 0;
-  padding: 73px 0 25px 0;
+  padding: 65px 0 25px 0;
   font-weight: normal;
   font-size: 30px;
   color: #000000;
@@ -2027,7 +2064,7 @@ p.name-section {
   color: #000000;
 }
 
-del {
+.old-cost {
   font: inherit;
   font-size: 17px;
   line-height: 18px;
@@ -2035,7 +2072,7 @@ del {
   color: #999999;
 }
 
-ins {
+.new-cost {
   width: 140px;
   min-height: 38px;
   padding-top: 10px;
@@ -2052,7 +2089,7 @@ ins {
   background-color: #ee3643;
 }
 
-ins::after {
+.new-cost::after {
   content: "";
   position: absolute;
   bottom: 20px;
@@ -2083,14 +2120,14 @@ ins::after {
   padding: 0;
 }
 
-.stock li {
+.stock .stock-card {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   flex-flow: column;
   align-items: center;
-  width: 220px;
-  height: 318px;
+  min-width: 220px;
+  min-height: 318px;
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
@@ -2100,14 +2137,14 @@ ins::after {
   border: 1px solid #ccc;
 }
 
-.stock-popular li {
+.stock-popular .stock-card {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   flex-flow: column;
   align-items: center;
-  width: 220px;
-  height: 318px;
+  min-width: 220px;
+  min-height: 318px;
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
@@ -2127,7 +2164,7 @@ ins::after {
   margin: 2px 0;
 }
 
-li .flag {
+.flag {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2138,28 +2175,15 @@ li .flag {
   z-index: 20;
 }
 
-li .flag-new {
+.flag-new {
   background: url("../img/new-flag.png") no-repeat 0 0;
 }
 
-li .actions {
+.actions {
   display: none;
-}
-
-li:hover .actions,
-li:focus .actions {
-  display: block;
-}
-
-.stock li:hover,
-.stock li:focus {
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-}
-
-li .actions {
   position: absolute;
-  top: 3px;
-  left: 0;
+  top: 0px;
+  left: 2px;
   width: 216px;
   height: 170px;
   padding: 10px 0;
@@ -2167,19 +2191,32 @@ li .actions {
   z-index: 10;
 }
 
+.stock-card:hover .actions,
+.stock-card:focus .actions {
+  display: block;
+}
+
+.stock .stock-card:hover,
+.stock .stock-card:focus {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
 a.product {
   margin-bottom: auto;
-  padding-top: 10px;
+  padding-top: 5px;
   text-align: center;
 }
 
 .buy {
-  margin-top: 30px;
+  display: block;
+  margin-top: 35px;
+  margin-left: auto;
+  margin-right: auto;
   width: 135px;
   height: 35px;
   font-family: "Cuprum", "Verdana", sans-serif;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 35px;
   font-weight: 400;
   color: #ffffff;
   text-transform: uppercase;
@@ -2202,12 +2239,15 @@ a.product {
 }
 
 .add-bookmarks {
-  margin-top: 12px;
+  display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
   width: 135px;
   height: 38px;
   font-family: "Cuprum", "Verdana", sans-serif;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 30px;
   font-weight: 400;
   color: #32425c;
   text-transform: uppercase;
@@ -2229,7 +2269,11 @@ a.product {
 
 .pagination-wrapper {
   width: 460px;
-  margin: -8px auto;
+  margin-top: -8px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+
 }
 
 .pagination-list {
@@ -2300,7 +2344,7 @@ a.product {
 }
 
 .modal-map {
-  bottom: 300px;
+  top: 25%;
   left: 25%;
   width: 972px;
   height: 476px;
@@ -2527,7 +2571,7 @@ button.feedback-button {
 }
 
 .added-product .good-added::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 20px;
   left: 65px;
