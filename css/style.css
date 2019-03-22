@@ -2338,7 +2338,7 @@ a.product {
 }
 
 .feedback {
-  bottom: 200px;
+  top: 25%;
   left: 50%;
   margin-left: -310px;
   width: 620px;
@@ -2358,7 +2358,7 @@ a.product {
 }
 
 .added-product {
-  bottom: 300px;
+  top: 35%;
   left: 35%;
   width: 620px;
   height: 282px;
