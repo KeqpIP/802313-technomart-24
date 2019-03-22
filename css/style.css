@@ -974,7 +974,7 @@ ul.popular-brands-wrapper {
 
 .servise-slider-controls {
   position: relative;
-  flex-shrink: 0;
+  float: left;
   width: 240px;
   margin: 0;
   margin-right: 55px;
@@ -1012,8 +1012,6 @@ ul.popular-brands-wrapper {
   cursor: pointer;
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: normal;
-  font-size: 21px;
-  line-height: 30px;
   font-weight: 700;
   color: #ffffff;
   text-transform: none;
@@ -1038,18 +1036,17 @@ ul.popular-brands-wrapper {
 
 .servises-list h3,
 .servises-list li {
-  display: inline-block;
+  display: block;
   vertical-align: middle;
   flex-shrink: 0;
   margin: 0;
   padding: 0;
-  -ms-flex-negative: 0;
 }
 
 .servises-list {
   display: flex;
   width: 300%;
-  height: 283px;
+  min-height: 283px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1193,6 +1190,7 @@ ul.popular-brands-wrapper {
 
 .section-contacts {
   padding-left: 55px;
+  padding-right: 10px;
 }
 
 .company-promo-1 {
@@ -1206,7 +1204,7 @@ ul.popular-brands-wrapper {
 }
 
 .contacts {
-  width: 390px;
+  width: 310px;
   min-height: 470px;
 }
 
@@ -1216,7 +1214,7 @@ ul.popular-brands-wrapper {
 }
 
 .map-link img {
-  margin-top: 30px;
+  margin-top: 18px;
   margin-bottom: 32px;
 }
 
@@ -1522,6 +1520,10 @@ a.social-button:hover {
 .my-orders {
   margin-left: -15px;
   margin-right: 15px;
+}
+
+.point {
+  color: #32425c;
 }
 
 .profile {
