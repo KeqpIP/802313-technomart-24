@@ -1037,7 +1037,6 @@ ul.popular-brands-wrapper {
 .servises-list h3,
 .servises-list li {
   display: block;
-  vertical-align: middle;
   flex-shrink: 0;
   margin: 0;
   padding: 0;
