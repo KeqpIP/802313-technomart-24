@@ -284,7 +284,7 @@ a {
   margin-bottom: 42px;
 }
 
-.center-header h1 {
+.center-header .title-main {
   margin-top: 15px;
   margin-left: 62px;
   width: 200px;
@@ -339,7 +339,7 @@ a {
   margin-right: -20px;
 }
 
-h1 {
+.title-main {
   font-family: "Cuprum", "Verdana", sans-serif;
   font-style: italic;
   font-size: 16px;
@@ -1408,6 +1408,7 @@ a.order:active {
 }
 
 .footer-contacts {
+  width: 330px;
   min-height: auto;
   padding-bottom: 50px;
   margin-top: 33px;
@@ -2338,8 +2339,9 @@ a.product {
 }
 
 .feedback {
-  top: 25%;
+  top: 50%;
   left: 50%;
+  margin-top: -215px;
   margin-left: -310px;
   width: 620px;
   padding-left: 80px;
@@ -2350,16 +2352,20 @@ a.product {
 }
 
 .modal-map {
-  top: 25%;
-  left: 25%;
+  top: 50%;
+  left: 50%;
+  margin-top: -238px;
+  margin-left: -486px;
   width: 972px;
   height: 476px;
   box-shadow: 0 20px 40px rgb(0, 0, 0, 0.75);
 }
 
 .added-product {
-  top: 35%;
-  left: 35%;
+  top: 50%;
+  left: 50%;
+  margin-top: -141px;
+  margin-left: -310px;
   width: 620px;
   height: 282px;
   box-shadow: 0 20px 40px rgb(0, 0, 0, 0.75);
@@ -2435,42 +2441,30 @@ a.product {
 
 .feedback-window::-webkit-input-placeholder {
   color: #a9a9a9;
-  padding-left: 15px;
 }
 
 .feedback-window::-moz-placeholder {
   color: #a9a9a9;
-  padding-left: 15px;
 }/* Firefox 19+ */
 .feedback-window:-moz-placeholder {
   color: #a9a9a9;
-  padding-left: 15px;
 }/* Firefox 18- */
 .feedback-window:-ms-input-placeholder {
   color: #a9a9a9;
-  padding-left: 15px;
 }
 
 .feedback-message::-webkit-input-placeholder {
   color: #a9a9a9;
-  padding-left: 15px;
-  padding-top: 10px;
 }
 
 .feedback-message::-moz-placeholder {
   color: #a9a9a9;
-  padding-left: 15px;
-  padding-top: 10px;
 }/* Firefox 19+ */
 .feedback-message:-moz-placeholder {
   color: #a9a9a9;
-  padding-left: 15px;
-  padding-top: 10px;
 }/* Firefox 18- */
 .feedback-message:-ms-input-placeholder {
   color: #a9a9a9;
-  padding-left: 15px;
-  padding-top: 10px;
 }
 
 .feedback-window::-webkit-input-placeholder {
@@ -2514,6 +2508,7 @@ a.product {
 }
 
 .feedback-window {
+  padding-left: 15px;
   font: inherit;
   font-size: 13px;
   line-height: 18px;
@@ -2526,6 +2521,7 @@ a.product {
 }
 
 .feedback-message {
+  padding-top: 10px;
   min-height: 115px;
   resize: none;
 }
